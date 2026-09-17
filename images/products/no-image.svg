@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#f2f0ed"/>
+  <g fill="none" stroke="#c9c2b8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="128" y="142" width="144" height="112" rx="10"/>
+    <circle cx="166" cy="180" r="13"/>
+    <path d="M136 232l40-38 30 28 26-22 32 30"/>
+  </g>
+  <text x="200" y="298" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif"
+        font-size="26" fill="#a89f93" text-anchor="middle">사진 없음</text>
+</svg>
