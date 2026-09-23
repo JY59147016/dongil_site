@@ -678,7 +678,7 @@ function productsToJs(products) {
     return q(v);
   };
   // 보기 좋은 순서로 먼저 쓰고, 그 밖의 항목은 뒤에 그대로
-  const ORDER = ['brand','category','model','name','image','images','specImage','certLogos','specs','tags','desc','docs'];
+  const ORDER = ['brand','category','model','name','image','images','specImage','specTable','certLogos','specs','tags','desc','docs'];
 
   let out = `/* ============================================================
    products-data.js — 전체 제품 데이터

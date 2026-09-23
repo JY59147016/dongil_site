@@ -2185,3 +2185,177 @@ ul { list-style: none; }
   margin: -4px 0 10px;
   line-height: 1.5;
 }
+
+/* 상세페이지 서류 버튼 — 파일 있음: 연한 베이지 / 파일 없음: 흰색 */
+.pd-docs .btn-doc {
+  background: #f1ebe3;            /* "제품 문의하기"(#7c6f5e)보다 연한 베이지 */
+  border: 1.5px solid #ddd2c4;
+  color: #5b4f41;
+}
+.pd-docs .btn-doc:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.pd-docs .btn-doc-disabled,
+.pd-docs .btn-doc-disabled:hover {
+  background: #fff;
+  border-color: var(--color-border);
+  color: #b8b8b8;
+  cursor: default;
+}
+
+/* 상세페이지 — 상품 이미지 영역과 제품 상세 스펙 사이 얇은 가로선 */
+.pd-divider {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 56px 0 0;
+}
+.pd-divider + .pd-spec-image-wrap { margin-top: 48px; }
+#pd-content[style*="display:none"] + .pd-divider { display: none; }   /* 제품을 못 찾았을 때는 선 숨김 */
+
+/* 상세페이지 — 제품 상세 스펙 표 (예전 스펙 이미지 대신) */
+.pd-spec-table { max-width: 960px; margin: 48px auto 0; }
+.pd-spec-title { font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-align: center; margin-bottom: 8px; }
+.pd-spec-group { font-size: 1rem; font-weight: 700; color: var(--color-primary); margin: 28px 0 10px; padding-left: 4px; }
+.pd-spec-grid { width: 100%; border-collapse: collapse; border-top: 2px solid var(--color-primary); table-layout: fixed; }
+.pd-spec-grid th,
+.pd-spec-grid td { padding: 13px 14px; font-size: 0.88rem; text-align: left; border-bottom: 1px solid var(--color-border); vertical-align: top; word-break: keep-all; }
+.pd-spec-grid th { width: 16%; color: var(--color-text-mute); font-weight: 500; background: var(--color-bg-soft); }
+.pd-spec-grid td { width: 34%; color: var(--color-primary); }
+@media (max-width: 600px) {
+  .pd-spec-grid, .pd-spec-grid tbody, .pd-spec-grid tr { display: block; }
+  .pd-spec-grid tr { display: grid; grid-template-columns: 36% 64%; }
+  .pd-spec-grid th, .pd-spec-grid td { width: auto; }
+  .pd-spec-grid td[colspan] { grid-column: auto; }
+}
+
+/* 상세페이지 — QR 안내·서류 버튼·문의 버튼 묶음을 왼쪽 상품 이미지 아래 선에 맞춤 */
+.pd-info { display: flex; flex-direction: column; }
+.pd-info-bottom { margin-top: auto; padding-top: 24px; }
+.pd-info-bottom .pd-qr-box { margin-top: 0; }
+
+/* 상세페이지 — QR 안내를 제품명 바로 아래로, 그 아래 기본정보 요약 표 */
+.pd-info > .pd-qr-box { margin-top: 16px; }
+.pd-basic-table { width: 100%; border-collapse: collapse; margin-top: 20px; border-top: 2px solid var(--color-primary); }
+.pd-basic-table th,
+.pd-basic-table td { padding: 11px 14px; font-size: 0.88rem; text-align: left; border-bottom: 1px solid var(--color-border); word-break: keep-all; }
+.pd-basic-table th { width: 28%; color: var(--color-text-mute); font-weight: 500; background: var(--color-bg-soft); }
+.pd-basic-table td { color: var(--color-primary); }
+/* 기본정보 표를 QR 안내와 서류 버튼 사이 여백의 세로 가운데로 */
+.pd-info .pd-basic-table { margin-top: auto; margin-bottom: auto; }
+.pd-info:has(.pd-basic-table:not([style*="none"])) .pd-info-bottom { margin-top: 0; padding-top: 0; }   /* 서류 버튼 자체 위 여백(20px)과 QR 아래 여백(20px)이 같아 표가 정확히 가운데 */
+.pd-info > .pd-qr-box { margin-bottom: 20px; }
+
+/* 상세페이지 — 서류 버튼 위 "다운로드" 제목 + 짧은 선 */
+.pd-docs-title {
+  margin-top: 20px;               /* QR 아래 여백과 같게 → 기본정보 표가 계속 가운데 */
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.pd-docs-title::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--color-accent);
+  margin-top: 6px;
+}
+.pd-docs-title + .pd-docs { margin-top: 12px; }
+/* 다운로드 제목 · 서류 버튼 · 문의 버튼 사이 간격 넓힘 */
+.pd-docs-title::after { margin-top: 8px; }
+.pd-docs-title + .pd-docs { margin-top: 28px; }   /* 서류 버튼 → 제품 문의하기 간격(28px)과 같게 */
+.pd-info-bottom .pd-actions { margin-top: 28px; }
+/* 버튼 간격을 넓힌 만큼 표 위아래 고정 여백을 같게 줄임 (표는 계속 가운데, 버튼은 이미지 아래 선에 맞춤) */
+.pd-info > .pd-qr-box { margin-bottom: 14px; }
+.pd-docs-title { margin-top: 14px; }
+
+/* ── 상세페이지 오른쪽 정보 칸: 항목 간격을 모두 같게 ──────────────────
+   [제목 묶음] · [QR 안내] · [기본정보 표] · [다운로드] · [서류 버튼] · [문의 버튼]
+   사이 간격을 똑같이 나누고(최소 14px), 맨 아래 문의 버튼은 왼쪽 이미지 아래 선에 맞춤 */
+.pd-info { justify-content: space-between; gap: 14px; }
+.pd-info-bottom { display: contents; }            /* 안의 다운로드·서류·문의 버튼도 같은 간격으로 */
+.pd-head .pd-name { margin-bottom: 0; }
+.pd-info > .pd-qr-box,
+.pd-info .pd-basic-table,
+.pd-info .pd-docs-title,
+.pd-info .pd-docs,
+.pd-info .pd-actions { margin-top: 0 !important; margin-bottom: 0 !important; }
+/* 인증 아이콘이 없는 제품도 제목 묶음 높이가 같도록 (아이콘 크기 36px) */
+.pd-head .pd-brand-row { min-height: 36px; }
+/* 제목 글자가 줄어드는 긴 제품명도 줄 높이는 같게 → 모든 제품에서 아래 항목 위치가 동일 */
+.pd-head .pd-name { line-height: 40px; }
+
+/* 상세페이지 경로 표시줄 — 오른쪽 제품 검색칸 */
+.pd-breadcrumb .container { display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; }
+.pd-search { position: relative; margin-left: auto; display: flex; align-items: center; }
+.pd-search input {
+  width: 240px;
+  padding: 7px 36px 7px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background: #fff;
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.pd-search input:focus { border-color: var(--color-accent); }
+.pd-search button {
+  position: absolute; right: 6px;
+  border: none; background: none; cursor: pointer;
+  font-size: 0.85rem; padding: 4px 6px;
+}
+.pd-search-results {
+  display: none;
+  position: absolute; top: calc(100% + 6px); right: 0;
+  width: 320px; max-height: 360px; overflow-y: auto;
+  background: #fff; border: 1px solid var(--color-border); border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  list-style: none; margin: 0; padding: 6px 0; z-index: 150;
+}
+.pd-search-results.open { display: block; }
+.pd-search-results li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 7px 12px; cursor: pointer; font-size: 0.82rem; color: var(--color-text);
+}
+.pd-search-results li img { width: 36px; height: 36px; object-fit: contain; background: #f5f5f5; border-radius: 6px; flex-shrink: 0; }
+.pd-search-results li b { color: var(--color-primary); margin-right: 4px; }
+.pd-search-results li:hover,
+.pd-search-results li.active { background: var(--color-bg-soft); }
+.pd-search-results li.empty { cursor: default; color: var(--color-text-mute); justify-content: center; }
+@media (max-width: 600px) {
+  .pd-search { margin-left: 0; width: 100%; }
+  .pd-search input { width: 100%; }
+  .pd-search-results { left: 0; width: auto; }
+}
+
+/* 제품 검색칸 — 박스 대신 밑줄만, 아이콘도 선으로 (색은 서류 다운로드 버튼 색 계열) */
+.pd-search input {
+  width: 220px;
+  padding: 5px 28px 5px 2px;
+  border: none;
+  border-bottom: 1px solid #ddd2c4;
+  border-radius: 0;
+  background: transparent;
+  color: #5b4f41;
+}
+.pd-search input::placeholder { color: #b3a695; }
+.pd-search input:focus { border-bottom-color: #5b4f41; }
+.pd-search button {
+  right: 0;
+  padding: 2px;
+  color: #7c6f5e;
+  display: flex;
+  align-items: center;
+}
+.pd-search button:hover { color: #5b4f41; }
+.pd-search-results {
+  border: 1px solid #ddd2c4;
+  border-radius: 4px;
+  box-shadow: 0 6px 16px rgba(91,79,65,0.08);
+}
+.pd-search-results li:hover,
+.pd-search-results li.active { background: #f1ebe3; }
+.pd-search-results li b { color: #5b4f41; }

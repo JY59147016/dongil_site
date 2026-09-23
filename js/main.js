@@ -112,8 +112,9 @@ function initProductFilter() {
                      (card.querySelector('.product-subname')?.textContent || '') +
                      (card.dataset.brand || '') +
                      (card.querySelector('.product-desc')?.textContent || '');
-        // "/" 는 무시하고 비교 (KLU-920CD 로 검색해도 KLU-920C/D 가 나오도록)
-        show = text.toLowerCase().replace(/\//g, '').includes(q.replace(/\//g, ''));
+        // "/", "-", 띄어쓰기는 무시하고 비교 (klu920cd 로 검색해도 KLU-920C/D 가 나오도록 — 상세페이지 검색칸과 같은 방식)
+        const norm = s => s.toLowerCase().replace(/[\/\s-]/g, '');
+        show = norm(text).includes(norm(q));
       }
       card.style.display = show ? '' : 'none';
       if (show) visibleCount++;

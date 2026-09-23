@@ -6,7 +6,7 @@
   <title>수전금구 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260923c">
+  <link rel="stylesheet" href="css/style.css?v=20260923x">
 </head>
 <body>
 
@@ -151,7 +151,6 @@
       <!-- 다운로드 버튼 -->
       <div class="sidebar-actions" id="sidebarActions" style="display:none">
         <button class="sidebar-dl-btn sidebar-dl-test"  id="sbBtnTest">📄 시험성적서 일괄 다운로드</button>
-        <button class="sidebar-dl-btn sidebar-dl-water" id="sbBtnWater">💧 절수확인서 일괄 다운로드</button>
         <button class="sidebar-dl-btn sidebar-dl-env"   id="sbBtnEnv">🌿 환경표지인증서 일괄 다운로드</button>
         <button class="sidebar-dl-btn sidebar-dl-clear" id="sbBtnClear">선택 전체 해제</button>
       </div>
@@ -287,7 +286,6 @@
   <div class="bulk-bar-count"><span id="bulkCount">0</span>개 선택</div>
   <div class="bulk-bar-btns">
     <button class="bulk-btn bulk-btn-test"  id="btnDlTest">📄 시험성적서</button>
-    <button class="bulk-btn bulk-btn-water" id="btnDlWater">💧 절수확인서</button>
     <button class="bulk-btn bulk-btn-env"   id="btnDlEnv">🌿 환경표지인증서</button>
     <button class="bulk-btn bulk-btn-clear" id="btnClear">선택 해제</button>
   </div>
@@ -328,8 +326,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260923c"></script>
-<script src="js/main.js?v=20260923c"></script>
+<script src="js/products-data.js?v=20260923x"></script>
+<script src="js/main.js?v=20260923x"></script>
 <script>
 /* ── 수전금구 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
@@ -561,6 +559,9 @@
       if (window.applyProductFilter) window.applyProductFilter();
       searchInput.focus();
     });
+    // 상세페이지 검색칸에서 넘어온 검색어(?q=)가 있으면 바로 검색
+    const q0 = new URLSearchParams(location.search).get('q');
+    if (q0) { searchInput.value = q0; searchInput.dispatchEvent(new Event('input')); }
   }
 
   /* ── 5. 토스트 ── */
