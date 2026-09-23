@@ -45,6 +45,8 @@
     .btn-logout:hover{background:rgba(255,255,255,.2)}
 
     .body-wrap{display:flex;min-height:calc(100vh - 54px)}
+    .btn-home{padding:6px 14px;border:1px solid #ddd;border-radius:6px;font-size:0.8rem;color:#333;text-decoration:none;background:#fff}
+    .btn-home:hover{border-color:#e63946;color:#e63946}
     .sidebar{width:200px;background:#fff;border-right:1px solid #e8e8e8;padding:20px 0;flex-shrink:0}
     .nav-section{font-size:0.68rem;font-weight:700;color:#aaa;padding:0 20px;margin-bottom:6px;margin-top:16px;letter-spacing:.05em}
     .nav-item{display:flex;align-items:center;gap:10px;padding:10px 20px;cursor:pointer;color:#555;font-size:0.85rem;transition:background .15s,color .15s;border-left:3px solid transparent}
@@ -257,8 +259,9 @@
   <div class="topbar">
     <div class="topbar-logo">동일<span>도기타일</span> 관리자</div>
     <div class="topbar-right">
+      <a class="btn-home" href="index.html" target="_blank" rel="noopener">🌐 홈페이지</a>
       <span id="adminWho"></span>
-      <span id="repoLabel">rinsoffical-art/rinsofficial</span>
+      <span id="repoLabel">JY59147016/dongil_site</span>
       <button class="btn-logout" id="btnLogout">로그아웃</button>
     </div>
   </div>
@@ -274,6 +277,8 @@
       <div class="nav-section">파일</div>
       <div class="nav-item" data-page="doc-upload"><span class="nav-icon">📄</span> 서류 업로드</div>
       <div class="nav-item" data-page="doc-bulk"><span class="nav-icon">📦</span> 서류 일괄 등록</div>
+      <div class="nav-section">바로가기</div>
+      <a class="nav-item" href="index.html" target="_blank" rel="noopener" style="text-decoration:none"><span class="nav-icon">🌐</span> 홈페이지</a>
     </div>
 
     <!-- 메인 콘텐츠 -->
@@ -285,7 +290,7 @@
         <div class="stat-grid" id="statGrid">
           <div class="stat-box"><div class="stat-num" id="statTotal">-</div><div class="stat-lbl">전체 제품</div></div>
           <div class="stat-box"><div class="stat-num" id="statSanitary">-</div><div class="stat-lbl">위생도기</div></div>
-          <div class="stat-box"><div class="stat-num" id="statFaucet">-</div><div class="stat-lbl">수전류</div></div>
+          <div class="stat-box"><div class="stat-num" id="statFaucet">-</div><div class="stat-lbl">수전금구</div></div>
           <div class="stat-box"><div class="stat-num" id="statDocs">-</div><div class="stat-lbl">서류 등록 제품</div></div>
         </div>
         <div class="card">
@@ -329,6 +334,7 @@
               <label>브랜드 *</label>
               <select id="fBrand">
                 <option value="">선택</option>
+                <option>계림바스</option>
                 <option>대림바스</option>
                 <option>대림통상</option>
                 <option>계림요업</option>
@@ -346,10 +352,11 @@
                   <option>양변기</option><option>세면기</option>
                   <option>소변기</option><option>기타</option>
                 </optgroup>
-                <optgroup label="수전류">
+                <optgroup label="수전금구">
                   <option>세면수전</option><option>샤워수전</option>
-                  <option>레인샤워수전</option><option>주방수전</option>
-                  <option>기타수전</option>
+                  <option>주방수전</option><option>레인샤워</option>
+                  <option>센서수전</option><option>유아·다용도수전</option>
+                  <option>샤워헤드</option><option>슬라이드바</option>
                 </optgroup>
                 <optgroup label="타일">
                   <option>타일</option>
@@ -538,8 +545,8 @@
 /* ══════════════════════════════════════════════════════
    설정
 ══════════════════════════════════════════════════════ */
-const OWNER  = 'rinsoffical-art';
-const REPO   = 'rinsofficial';
+const OWNER  = 'JY59147016';
+const REPO   = 'dongil_site';
 
 /* ══════════════════════════════════════════════════════
    ★ 관리자 계정 설정
@@ -576,7 +583,9 @@ async function makeHash(pw) {
   console.log('%c해시: ' + h, 'font-weight:bold');
   return h;
 }
-const SANITARY_CATS = ['양변기','세면기','소변기','기타','세면수전','샤워수전','레인샤워수전','주방수전','기타수전'];
+const SANITARY_CATS = ['양변기','세면기','소변기','기타'];
+// 수전금구 카테고리 — products-faucet.html, product.html 의 목록과 같게 유지
+const FAUCET_CATS   = ['세면수전','샤워수전','주방수전','레인샤워','센서수전','유아·다용도수전','샤워헤드','슬라이드바'];
 
 let TOKEN  = '';
 let BRANCH = 'main';
@@ -631,45 +640,62 @@ async function getSha(path) {
 ══════════════════════════════════════════════════════ */
 async function loadProducts() {
   const file = await ghGet('js/products-data.js');
-  const js   = atob(file.content.replace(/\n/g, ''));
+  // GitHub 은 1MB 넘는 파일은 content 를 비워서 주므로, 그 경우 blob API 로 다시 받음
+  let b64 = (file.content || '').replace(/\n/g, '');
+  if (!b64) b64 = (await ghGetBlob(file.sha)).content.replace(/\n/g, '');
+  // base64 → UTF-8 (atob 만 쓰면 한글이 깨짐)
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  const js    = new TextDecoder('utf-8').decode(bytes).replace(/^﻿/, '');
   // JS 파일에서 PRODUCTS 객체 추출
-  const fn = new Function(js.replace('const PRODUCTS', 'var PRODUCTS') + '; return PRODUCTS;');
+  const fn = new Function(js.replace(/\bconst PRODUCTS\b/, 'var PRODUCTS') + '; return PRODUCTS;');
   PRODUCTS = fn();
   return { products: PRODUCTS, sha: file.sha, raw: js };
 }
 
+async function ghGetBlob(sha) {
+  const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/git/blobs/${sha}`, {
+    headers: { Authorization: `token ${TOKEN}`, Accept: 'application/vnd.github.v3+json' }
+  });
+  if (!r.ok) throw new Error(`GET blob → ${r.status}`);
+  return r.json();
+}
+
+/* 제품 데이터 → products-data.js 내용
+   ★ 제품에 들어 있는 항목(사진 목록 images, 스펙 이미지 specImage, 인증 아이콘 certLogos 등)을
+     빠짐없이 그대로 저장합니다. (예전에는 일부 항목만 저장해서 나머지가 지워졌음) */
 function productsToJs(products) {
+  const q = s => "'" + String(s ?? '').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n') + "'";
+  const isIdent = k => /^[A-Za-z_$가-힣][A-Za-z0-9_$가-힣]*$/.test(k);
+  const key = k => isIdent(k) ? k : q(k);
+  const val = (v, ind) => {
+    if (Array.isArray(v)) return '[' + v.map(x => val(x, ind)).join(', ') + ']';
+    if (v && typeof v === 'object') {
+      const ents = Object.entries(v);
+      if (!ents.length) return '{}';
+      return '{\n' + ents.map(([k, x]) => `${ind}  ${key(k)}: ${val(x, ind + '  ')},`).join('\n') + `\n${ind}}`;
+    }
+    if (typeof v === 'number' || typeof v === 'boolean') return String(v);
+    return q(v);
+  };
+  // 보기 좋은 순서로 먼저 쓰고, 그 밖의 항목은 뒤에 그대로
+  const ORDER = ['brand','category','model','name','image','images','specImage','certLogos','specs','tags','desc','docs'];
+
   let out = `/* ============================================================
    products-data.js — 전체 제품 데이터
    ★ 이 파일은 관리자 페이지에서 자동 생성됩니다.
-   ============================================================ */\n\nconst PRODUCTS = {\n\n`;
+   ============================================================ */
 
-  const brandGroups = {};
+const PRODUCTS = {
+`;
   Object.entries(products).forEach(([id, p]) => {
-    if (!brandGroups[p.brand]) brandGroups[p.brand] = [];
-    brandGroups[p.brand].push([id, p]);
-  });
-
-  Object.entries(brandGroups).forEach(([brand, items]) => {
-    out += `  /* ── ${brand} ────────────────────────────────── */\n\n`;
-    items.forEach(([id, p]) => {
-      const specsStr = Object.entries(p.specs || {})
-        .map(([k,v]) => `      '${k}': '${v}'`).join(',\n');
-      const tagsStr  = (p.tags || []).map(t => `'${t}'`).join(', ');
-      const docsEntries = Object.entries(p.docs || {}).filter(([,v]) => v && v !== '#');
-      const docsStr = docsEntries.length
-        ? `    docs: {\n${docsEntries.map(([k,v])=>`      ${k}: '${v}'`).join(',\n')},\n    },` : '';
-
-      out += `  '${id}': {\n`;
-      out += `    brand: '${p.brand}', category: '${p.category}',\n`;
-      out += `    model: '${p.model}', name: '${p.name}',\n`;
-      out += `    image: '${p.image || ''}',\n`;
-      out += `    specs: {\n${specsStr}${specsStr ? '\n' : ''}    },\n`;
-      out += `    tags: [${tagsStr}],\n`;
-      out += `    desc: '${(p.desc||'').replace(/'/g,"\\'")}',\n`;
-      if (docsStr) out += `${docsStr}\n`;
-      out += `  },\n\n`;
+    const keys = [...ORDER.filter(k => k in p), ...Object.keys(p).filter(k => !ORDER.includes(k))];
+    out += `  ${q(id)}: {\n`;
+    keys.forEach(k => {
+      let v = p[k];
+      if (k === 'docs') v = Object.fromEntries(Object.entries(v || {}).filter(([, u]) => u && u !== '#'));
+      out += `    ${key(k)}: ${val(v, '    ')},\n`;
     });
+    out += `  },\n`;
   });
   out += `};\n`;
   return out;
@@ -849,8 +875,8 @@ function goPage(id) {
 ══════════════════════════════════════════════════════ */
 function renderDashboard() {
   const all = Object.values(PRODUCTS);
-  const san = all.filter(p => SANITARY_CATS.includes(p.category) && !['세면수전','샤워수전','레인샤워수전','주방수전','기타수전'].includes(p.category));
-  const fau = all.filter(p => ['세면수전','샤워수전','레인샤워수전','주방수전','기타수전'].includes(p.category));
+  const san = all.filter(p => SANITARY_CATS.includes(p.category));
+  const fau = all.filter(p => FAUCET_CATS.includes(p.category));
   const doc = all.filter(p => p.docs && Object.values(p.docs).some(v => v && v !== '#'));
 
   document.getElementById('statTotal').textContent    = all.length;
@@ -1073,6 +1099,8 @@ document.getElementById('btnSave').addEventListener('click', async () => {
     // products-data.js 업데이트
     log('제품 데이터 저장 중...');
     PRODUCTS[id] = {
+      // 수정일 때: 폼에 없는 항목(사진 목록·스펙 이미지·인증 아이콘 등)은 기존 값 그대로 유지
+      ...(editingId && PRODUCTS[editingId] ? PRODUCTS[editingId] : {}),
       brand, category, model, name,
       image: imagePath,
       specs: getSpecs(),
@@ -1178,7 +1206,7 @@ function onImgFile(file) {
 ══════════════════════════════════════════════════════ */
 function getBrandFolder(brand) {
   const map = {
-    '대림바스':'daelim-bath','대림통상':'daelim-tong','계림요업':'gyerim',
+    '대림바스':'daelim-bath','대림통상':'daelim-tong','계림요업':'gyerim', '계림바스':'gyerim',
     '로얄앤컴퍼니':'royal','아메리칸스탠다드':'american-standard',
     '이누스':'inus','크린스':'krins'
   };

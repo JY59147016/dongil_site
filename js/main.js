@@ -81,10 +81,10 @@ function initProductFilter() {
   const filterGroups = document.querySelectorAll('.filter-group');
   if (!filterGroups.length) return;
 
-  // 모든 제품 카드 (평면 그리드)
-  const allCards = document.querySelectorAll('.product-card');
-
   function applyFilter() {
+    // 모든 제품 카드 (평면 그리드) — JS로 나중에 그려지는 카드도 포함되도록 매번 조회
+    const allCards = document.querySelectorAll('.product-card');
+
     // 그룹별 선택값 수집
     const activeFilters = {};
     filterGroups.forEach(group => {
@@ -94,23 +94,41 @@ function initProductFilter() {
       activeFilters[key].push(...vals);
     });
 
-    const hasAnyFilter = Object.values(activeFilters).some(v => v.length > 0);
+    // 검색어 (사이드바 검색창) — 필터와 함께 적용
+    const searchInput = document.getElementById('productSearch');
+    const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+    const hasAnyFilter = q !== '' || Object.values(activeFilters).some(v => v.length > 0);
     let visibleCount = 0;
 
     allCards.forEach(card => {
-      const show = Object.entries(activeFilters).every(([key, vals]) => {
+      let show = Object.entries(activeFilters).every(([key, vals]) => {
         if (!vals.length) return true;
         return vals.includes(card.dataset[key] || '');
       });
+      if (show && q) {
+        const text = (card.querySelector('.product-name')?.textContent || '') +
+                     (card.querySelector('.product-model')?.textContent || '') +
+                     (card.querySelector('.product-subname')?.textContent || '') +
+                     (card.dataset.brand || '') +
+                     (card.querySelector('.product-desc')?.textContent || '');
+        // "/" 는 무시하고 비교 (KLU-920CD 로 검색해도 KLU-920C/D 가 나오도록)
+        show = text.toLowerCase().replace(/\//g, '').includes(q.replace(/\//g, ''));
+      }
       card.style.display = show ? '' : 'none';
       if (show) visibleCount++;
     });
 
+    // "전체 선택" 옆 제품 수 표시
+    const countEl = document.getElementById('resultCount');
+    if (countEl) countEl.textContent = '총 ' + visibleCount + '개 제품';
+
     const noResult = document.getElementById('no-result');
     if (noResult) {
-      noResult.style.display = (hasAnyFilter && visibleCount === 0) ? '' : 'none';
+      noResult.style.display = (hasAnyFilter && visibleCount === 0) ? 'block' : 'none';
     }
   }
+  window.applyProductFilter = applyFilter;   // 검색창·카드 렌더링 후 다시 적용할 때 사용
 
   // 체크박스 이벤트
   filterGroups.forEach(group => {
@@ -202,7 +220,7 @@ document.querySelectorAll('.product-card').forEach(card => {
       if (left + 360 > window.innerWidth) left = window.innerWidth - 370;
       if (left < 10) left = 10;
       preview.style.left = left + 'px';
-      preview.style.top  = (rect.bottom + window.scrollY + 10) + 'px';
+      preview.style.top  = (rect.bottom + 10) + 'px';   // fixed 위치이므로 스크롤 값 불필요
       preview.classList.add('visible');
       video.play().catch(() => {});
     });

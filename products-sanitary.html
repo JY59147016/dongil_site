@@ -32,7 +32,20 @@
             <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=세면기">세면기</a>
             <a href="products-sanitary.html?cat=소변기">소변기</a>
-            <a href="products-sanitary.html?cat=수전류">수전류</a>
+          </div>
+        </li>
+        <li class="nav-item has-dropdown">
+          <a href="products-faucet.html">수전금구</a>
+          <div class="nav-dropdown">
+            <a href="products-faucet.html">전체보기</a>
+            <a href="products-faucet.html?cat=세면수전">세면수전</a>
+            <a href="products-faucet.html?cat=샤워수전">샤워수전</a>
+            <a href="products-faucet.html?cat=주방수전">주방수전</a>
+            <a href="products-faucet.html?cat=레인샤워">레인샤워</a>
+            <a href="products-faucet.html?cat=센서수전">센서수전</a>
+            <a href="products-faucet.html?cat=유아·다용도수전">유아·다용도수전</a>
+            <a href="products-faucet.html?cat=샤워헤드">샤워헤드</a>
+            <a href="products-faucet.html?cat=슬라이드바">슬라이드바</a>
           </div>
         </li>
         <li class="nav-item">
@@ -62,7 +75,20 @@
       <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=세면기">세면기</a>
       <a href="products-sanitary.html?cat=소변기">소변기</a>
-      <a href="products-sanitary.html?cat=수전류">수전류</a>
+    </div>
+  </div>
+  <div class="mob-item">
+    <button class="mob-toggle">수전금구 <span class="mob-arrow">▾</span></button>
+    <div class="mob-sub">
+      <a href="products-faucet.html">전체보기</a>
+      <a href="products-faucet.html?cat=세면수전">세면수전</a>
+      <a href="products-faucet.html?cat=샤워수전">샤워수전</a>
+      <a href="products-faucet.html?cat=주방수전">주방수전</a>
+      <a href="products-faucet.html?cat=레인샤워">레인샤워</a>
+      <a href="products-faucet.html?cat=센서수전">센서수전</a>
+      <a href="products-faucet.html?cat=유아·다용도수전">유아·다용도수전</a>
+      <a href="products-faucet.html?cat=샤워헤드">샤워헤드</a>
+      <a href="products-faucet.html?cat=슬라이드바">슬라이드바</a>
     </div>
   </div>
   <div class="mob-item">
@@ -155,8 +181,8 @@
             <label for="s-brand-daelimtong">대림통상</label>
           </div>
           <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-brand-gyerim" value="계림요업">
-            <label for="s-brand-gyerim">계림요업</label>
+            <input type="checkbox" class="item-check" id="s-brand-gyerim" value="계림바스">
+            <label for="s-brand-gyerim">계림바스</label>
           </div>
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-daelimbath" value="대림바스">
@@ -205,27 +231,6 @@
             <input type="checkbox" class="item-check" id="s-cat-etc" value="기타">
             <label for="s-cat-etc">기타</label>
           </div>
-          <div class="filter-sub-divider"></div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-basin-f" value="세면수전">
-            <label for="s-cat-basin-f">세면수전</label>
-          </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-shower-f" value="샤워수전">
-            <label for="s-cat-shower-f">샤워수전</label>
-          </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-rain" value="레인샤워수전">
-            <label for="s-cat-rain">레인샤워수전</label>
-          </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-kitchen-f" value="주방수전">
-            <label for="s-cat-kitchen-f">주방싱크수전</label>
-          </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-faucet-etc" value="기타수전">
-            <label for="s-cat-faucet-etc">기타수전</label>
-          </div>
         </div>
       </div>
 
@@ -235,6 +240,7 @@
     <div class="select-toolbar">
       <button class="btn-select-all" id="btnSelectAll">전체 선택</button>
       <button class="btn-select-all" id="btnSelectNone" style="display:none">전체 해제</button>
+      <span class="result-count" id="resultCount"></span>
       <span id="selectCount" style="font-weight:600; color:var(--color-accent); display:none;"></span>
       <span class="select-hint">제품을 선택하면 서류를 한 번에 다운로드할 수 있습니다</span>
     </div>
@@ -286,8 +292,17 @@
     <div class="footer-inner">
       <div>
         <div class="footer-logo">동일<span>도기타일</span></div>
-        <p class="footer-desc">위생도기와 타일 분야의 전문 기업으로<br>고품질 제품과 신뢰 있는 서비스를 제공합니다.</p>
+        <p class="footer-desc">위생도기와 타일 분야의 전문기업으로<br>고품질 제품과 신뢰있는 서비스를 제공합니다.</p>
       </div>
+
+      <!-- 연락처 (문의하기 페이지와 동일 — 바뀌면 같이 수정) -->
+      <div class="footer-contact">
+        <p><span class="fc-label">Address</span>부산광역시 강서구 유통단지 1로 76, 건축자재 유통단지 1동 202호</p>
+        <p><span class="fc-label">Tel</span>051-633-5511<span class="fc-sep"></span><span class="fc-label">Fax</span>051-631-3618</p>
+        <p><span class="fc-label">E-mail</span>dongildogi@naver.com</p>
+        <p><span class="fc-label">Hours</span>평일 09:00 – 18:00 (토·일·공휴일 휴무)</p>
+      </div>
+
     </div>
     <div class="footer-bottom">
       <span>© 2025 동일도기타일. All rights reserved.</span>
@@ -301,7 +316,7 @@
 <script>
 /* ── 위생도기 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
-  const SANITARY_CATS = ['양변기','세면기','소변기','기타','세면수전','샤워수전','레인샤워수전','주방수전','기타수전'];
+  const SANITARY_CATS = ['양변기','세면기','소변기','기타'];
   const grid = document.getElementById('product-grid');
   if (!grid || typeof PRODUCTS === 'undefined') return;
 
@@ -309,6 +324,8 @@
     if (!SANITARY_CATS.includes(p.category)) return;
     const firstSpec = Object.values(p.specs || {})[0] || '';
     const tagsHtml  = (p.tags || []).map(t => `<span class="product-tag">${t}</span>`).join('');
+    const logosHtml = (p.certLogos || []).map(c =>
+      `<span class="product-cert-logo" title="${c}"><img src="images/badges/${c}.svg" alt="${c} 인증"></span>`).join('');
     const card = document.createElement('div');
     card.className   = 'product-card';
     card.id          = id;
@@ -320,8 +337,10 @@
              onerror="this.onerror=null;this.src='images/products/no-image.svg'">
       </div>
       <div class="product-info">
-        <p class="product-model">${p.brand} · ${p.model}</p>
-        <h3 class="product-name">${p.name}</h3>
+        <p class="product-model">${p.brand}</p>
+        <p class="product-subname" title="${p.name || ''}">${p.name || ''}</p>
+        <h3 class="product-name">${p.model}</h3>
+        <div class="product-cert-logos">${logosHtml}</div>
         <p class="product-desc">${firstSpec}</p>
         <div class="product-tags">${tagsHtml}</div>
         <div class="qr-badge">📱 QR 스캔으로 상세 확인</div>
@@ -329,6 +348,8 @@
       </div>`;
     grid.appendChild(card);
   });
+  /* 카드가 그려진 뒤 필터·제품 수 다시 계산 */
+  if (window.applyProductFilter) window.applyProductFilter();
 })();
 </script>
 <script>
@@ -340,10 +361,7 @@
   const group = document.querySelector('.filter-group[data-filter-group="category"]');
   if (!group) return;
 
-  /* 수전류: 수전 관련 카테고리 전체 선택 */
-  const targets = cat === '수전류'
-    ? ['세면수전', '샤워수전', '레인샤워수전', '주방수전', '기타수전']
-    : [cat];
+  const targets = [cat];
 
   let checked = false;
   targets.forEach(val => {
@@ -508,19 +526,12 @@
     searchInput.addEventListener('input', () => {
       const q = searchInput.value.trim().toLowerCase();
       searchClear.style.display = q ? '' : 'none';
-      document.querySelectorAll('.product-card').forEach(card => {
-        if (q === '') { card.style.display = ''; return; }
-        const text = (card.querySelector('.product-name')?.textContent || '') +
-                     (card.querySelector('.product-model')?.textContent || '') +
-                     (card.dataset.brand || '') +
-                     (card.querySelector('.product-desc')?.textContent || '');
-        card.style.display = text.toLowerCase().includes(q) ? '' : 'none';
-      });
+      if (window.applyProductFilter) window.applyProductFilter();
     });
     searchClear.addEventListener('click', () => {
       searchInput.value = '';
       searchClear.style.display = 'none';
-      document.querySelectorAll('.product-card').forEach(c => c.style.display = '');
+      if (window.applyProductFilter) window.applyProductFilter();
       searchInput.focus();
     });
   }
