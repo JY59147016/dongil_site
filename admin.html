@@ -23,6 +23,7 @@
     .login-field input:focus{border-color:#e63946}
     .login-field .hint{font-size:0.72rem;color:#aaa;margin-top:4px}
     .btn-login{width:100%;padding:12px;background:#e63946;color:#fff;border:none;border-radius:8px;font-size:0.9rem;font-weight:700;cursor:pointer;margin-top:8px;font-family:inherit;transition:opacity .15s}
+    .login-auto{display:flex;align-items:center;gap:6px;font-size:0.8rem;color:#555;margin-top:10px;cursor:pointer}.login-auto span{color:#999;font-size:0.72rem}
     .btn-login:hover{opacity:.88}
     .login-err{color:#e63946;font-size:0.8rem;text-align:center;margin-top:10px;display:none}
     .login-step{display:none}
@@ -94,6 +95,14 @@
 
     /* 규격 동적 입력 */
     .spec-list{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+    /* 규격 정보 양식 (상세페이지 제품 상세 스펙 표와 같은 구성) */
+    .spec-group{margin-bottom:18px}
+    .spec-group:last-child{margin-bottom:0}
+    .spec-group-title{font-size:0.82rem;font-weight:700;color:#333;padding-bottom:6px;margin-bottom:10px;border-bottom:2px solid #333}
+    .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+    .spec-grid .fld.wide{grid-column:1 / -1}
+    .spec-grid input:disabled{background:#f5f5f5;color:#999}
+    @media(max-width:900px){.spec-grid{grid-template-columns:1fr}}
     .spec-row{display:flex;gap:8px;align-items:center}
     .spec-row input{flex:1;padding:8px 10px;border:1.5px solid #ddd;border-radius:6px;font-size:0.82rem;font-family:inherit;outline:none}
     .spec-row input:focus{border-color:#e63946}
@@ -243,6 +252,10 @@
           권한: Contents (Read and write)
         </div>
       </div>
+      <label class="login-auto">
+        <input type="checkbox" id="loginAuto" checked>
+        이 컴퓨터에서 자동 로그인 <span>(개인 PC에서만 사용하세요)</span>
+      </label>
       <button class="btn-login" id="btnLogin">연결하고 시작하기</button>
       <button class="btn-back" id="btnBack">← 계정 다시 로그인</button>
       <div class="login-err" id="loginErr">토큰이 올바르지 않거나 저장소 접근 권한이 없습니다.</div>
@@ -387,12 +400,6 @@
         </div>
 
         <div class="card">
-          <div class="card-title">규격 정보</div>
-          <div class="spec-list" id="specList"></div>
-          <button class="btn-add-spec" id="btnAddSpec">+ 규격 항목 추가</button>
-        </div>
-
-        <div class="card">
           <div class="card-title">제품 이미지</div>
           <div class="img-toggle">
             <button class="active" id="imgModeUrl" onclick="setImgMode('url')">URL 링크</button>
@@ -436,7 +443,21 @@
               <label>📐 시공도면 URL</label>
               <input type="text" id="fDocDraw" placeholder="https://example.com/drawing.pdf">
             </div>
+            <div class="fld">
+              <label>📁 CAD URL</label>
+              <input type="text" id="fDocCad" placeholder="https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/...">
+            </div>
+            <div class="fld">
+              <label>📘 사용설명서 URL</label>
+              <input type="text" id="fDocManual" placeholder="https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/...">
+            </div>
           </div>
+        </div>
+
+        <!-- 규격 정보 — 상세페이지 "제품 상세 스펙" 표와 같은 양식 (기본정보 · 기능 · 인증) -->
+        <div class="card">
+          <div class="card-title">규격 정보 <span style="font-weight:400;color:#999;font-size:0.75rem">— 상세페이지 "제품 상세 스펙" 표와 같은 양식 · 비워두면 표에 표시되지 않습니다 · 품번·제품명은 위 기본 정보에서 자동</span></div>
+          <div id="specForm"></div>
         </div>
 
         <div class="card" id="saveStatus" style="display:none">
@@ -781,6 +802,14 @@ document.getElementById('btnLogin').addEventListener('click', async () => {
     // 성공
     sessionStorage.setItem('ghToken', tok);
     sessionStorage.setItem('ghBranch', branch);
+    // 자동 로그인: 이 브라우저에만 기억 (코드·저장소에는 저장하지 않음). 로그아웃하면 지워짐
+    try {
+      if (document.getElementById('loginAuto').checked) {
+        localStorage.setItem('adminAuto', JSON.stringify({ id: ADMIN && ADMIN.id, token: tok, branch }));
+      } else {
+        localStorage.removeItem('adminAuto');
+      }
+    } catch (e) { /* 브라우저가 저장을 막으면 이번 창에서만 로그인 유지 */ }
     enterAdmin();
   } catch(e) {
     showErr('접근 실패. 토큰·브랜치 이름을 확인하세요.');
@@ -816,12 +845,20 @@ function enterAdmin() {
    세션 복원 — 계정 로그인과 토큰이 모두 있어야 통과
 ══════════════════════════════════════════════════════ */
 window.addEventListener('load', () => {
+  // 자동 로그인 정보(이 브라우저에 기억된 것)가 있으면 그것으로 바로 로그인
+  let auto = null;
+  try { auto = JSON.parse(localStorage.getItem('adminAuto') || 'null'); } catch (e) {}
+  if (auto && auto.id && auto.token) {
+    sessionStorage.setItem('adminId', auto.id);
+    sessionStorage.setItem('ghToken', auto.token);
+    sessionStorage.setItem('ghBranch', auto.branch || 'main');
+  }
   const savedId = sessionStorage.getItem('adminId');
   const t = sessionStorage.getItem('ghToken');
   const b = sessionStorage.getItem('ghBranch');
 
   const user = savedId ? ADMIN_USERS.find(u => u.id === savedId) : null;
-  if (!user) { sessionStorage.clear(); goStep(1); return; }
+  if (!user) { try { localStorage.removeItem('adminAuto'); } catch (e) {} sessionStorage.clear(); goStep(1); return; }
 
   ADMIN = user;
   document.getElementById('whoLabel').textContent = user.name || user.id;
@@ -837,6 +874,8 @@ window.addEventListener('load', () => {
 });
 
 document.getElementById('btnLogout').addEventListener('click', () => {
+  // 로그아웃하면 자동 로그인 정보도 삭제
+  try { localStorage.removeItem('adminAuto'); } catch (e) {}
   sessionStorage.clear(); TOKEN = ''; ADMIN = null; location.reload();
 });
 
@@ -851,7 +890,6 @@ async function initAdmin() {
     renderDocProductSelect();
     initDropzones();
     initBulkDocPage();
-    addSpecRow(); // 기본 규격 입력 1개
   } catch(e) { toast('데이터 로드 실패: ' + e.message, 'err'); }
 }
 
@@ -942,26 +980,68 @@ document.getElementById('listSearch').addEventListener('input', e => {
 /* ══════════════════════════════════════════════════════
    제품 추가 / 수정 폼
 ══════════════════════════════════════════════════════ */
-// 규격 행 추가
-function addSpecRow(key, val) {
-  const list = document.getElementById('specList');
-  const row  = document.createElement('div');
-  row.className = 'spec-row';
-  row.innerHTML = `
-    <input type="text" placeholder="항목명 (예: 규격)" value="${key||''}">
-    <input type="text" placeholder="내용 (예: KS규격 C2010C)" value="${val||''}">
-    <button onclick="this.closest('.spec-row').remove()">✕</button>`;
-  list.appendChild(row);
-}
-document.getElementById('btnAddSpec').addEventListener('click', () => addSpecRow());
+/* 규격 정보 입력 양식 — 상세페이지 "제품 상세 스펙" 표와 같은 순서·항목
+   (품번·제품명은 기본 정보의 모델번호·제품명으로 자동 채움) */
+const SPEC_TEMPLATE = {
+  '기본정보': [['사이즈', '예: 52.0(W) x 178.0(D) x 296.0(H)'], ['색상', '예: 크롬'], ['재질', '예: 황동,아연(핸들)'], ['비고', '']],
+  '기능':     [['시리즈', '예: K-series'], ['필터교체', ''], ['분사 모드', '예: 직수 모드,스프레이 모드'], ['납 용출량', '예: 0.001이하(mg/L)'],
+               ['배관규격', '예: 15A'], ['중량', '예: 1.76kg'], ['특징', '예: 자동 폽업 전용 제품']],
+  '인증':     [['KS 기호', '예: KTC-2017-0033'], ['KS 인증', 'O / X'], ['KC 기호', '예: KCW-2012-0274'], ['KC 인증', 'O / X'],
+               ['친환경 인증', 'O / X'], ['절수 등급', '예: 1등급(수도법)']],
+};
 
-function getSpecs() {
-  const specs = {};
-  document.querySelectorAll('#specList .spec-row').forEach(row => {
-    const [k, v] = row.querySelectorAll('input');
-    if (k.value.trim()) specs[k.value.trim()] = v.value.trim();
+function renderSpecForm() {
+  const box = document.getElementById('specForm');
+  box.innerHTML = Object.entries(SPEC_TEMPLATE).map(([group, fields]) => `
+    <div class="spec-group">
+      <div class="spec-group-title">${group}</div>
+      <div class="spec-grid">
+        ${group === '기본정보' ? '<div class="fld"><label>품번</label><input type="text" disabled placeholder="모델번호 자동"></div><div class="fld"><label>제품명</label><input type="text" disabled placeholder="제품명 자동"></div>' : ''}
+        ${fields.map(([k, ph]) => `<div class="fld${k === '특징' ? ' wide' : ''}"><label>${k}</label><input type="text" data-group="${group}" data-key="${k}" placeholder="${ph}"></div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+renderSpecForm();
+
+// 양식 칸 채우기 (수정할 때) — 양식에 없는 항목이 있으면 그 그룹 끝에 칸을 추가해서 보존
+function fillSpecForm(specTable) {
+  renderSpecForm();
+  Object.entries(specTable || {}).forEach(([group, pairs]) => {
+    pairs.forEach(([k, v]) => {
+      if (k === '품번' || k === '제품명') {
+        // 기존 스펙의 품번·제품명은 그대로 보존 (계림 원본 표기와 사이트 표기가 다른 제품이 있음)
+        const ro = document.querySelectorAll('#specForm .spec-group:first-child input:disabled')[k === '품번' ? 0 : 1];
+        if (ro) { ro.value = v; ro.dataset.keep = '1'; }
+        return;
+      }
+      let inp = document.querySelector(`#specForm input[data-group="${group}"][data-key="${k}"]`);
+      if (!inp) {
+        let grid = [...document.querySelectorAll('#specForm .spec-group')].find(g => g.querySelector('.spec-group-title').textContent === group)?.querySelector('.spec-grid');
+        if (!grid) {
+          document.getElementById('specForm').insertAdjacentHTML('beforeend', `<div class="spec-group"><div class="spec-group-title">${group}</div><div class="spec-grid"></div></div>`);
+          grid = document.querySelector('#specForm .spec-group:last-child .spec-grid');
+        }
+        grid.insertAdjacentHTML('beforeend', `<div class="fld"><label>${k}</label><input type="text" data-group="${group}" data-key="${k}"></div>`);
+        inp = grid.querySelector(`input[data-key="${k}"]`);
+      }
+      inp.value = v;
+    });
   });
-  return specs;
+}
+
+// 양식 → specTable (빈 칸은 빼고, 기본정보 앞에 품번·제품명)
+function getSpecTable(model, name) {
+  const table = {};
+  document.querySelectorAll('#specForm .spec-group').forEach(g => {
+    const group = g.querySelector('.spec-group-title').textContent;
+    const pairs = [...g.querySelectorAll('input[data-key]')].map(i => [i.dataset.key, i.value.trim()]).filter(([, v]) => v);
+    if (group === '기본정보') {
+      const [roModel, roName] = g.querySelectorAll('input:disabled');   // 수정할 때 기존 값이 있으면 그 값, 새 제품이면 모델번호·제품명
+      pairs.unshift(['품번', roModel?.dataset.keep ? roModel.value : model], ['제품명', roName?.dataset.keep ? roName.value : name]);
+    }
+    if (pairs.length) table[group] = pairs;
+  });
+  return table;
 }
 
 // 이미지 모드 전환
@@ -974,12 +1054,11 @@ function setImgMode(mode) {
 
 // 폼 초기화
 function resetForm() {
-  ['fBrand','fCategory','fModel','fName','fTags','fDesc','fImageUrl','fDocTest','fDocWater','fDocEnv','fDocDraw'].forEach(id => {
+  ['fBrand','fCategory','fModel','fName','fTags','fDesc','fImageUrl','fDocTest','fDocWater','fDocEnv','fDocDraw','fDocCad','fDocManual'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.value = '';
   });
-  document.getElementById('specList').innerHTML = '';
-  addSpecRow();
+  renderSpecForm();
   window.imgFile = null;
   document.getElementById('imgPreview').innerHTML = '';
   document.getElementById('editingId').value = '';
@@ -1009,9 +1088,9 @@ function editProduct(id) {
   document.getElementById('fDocWater').value  = p.docs?.['절수확인서']    || '';
   document.getElementById('fDocEnv').value    = p.docs?.['환경표지인증서'] || '';
   document.getElementById('fDocDraw').value   = p.docs?.['시공도면']      || '';
-  document.getElementById('specList').innerHTML = '';
-  Object.entries(p.specs||{}).forEach(([k,v]) => addSpecRow(k, v));
-  if (!Object.keys(p.specs||{}).length) addSpecRow();
+  document.getElementById('fDocCad').value    = p.docs?.['CAD']           || '';
+  document.getElementById('fDocManual').value = p.docs?.['사용설명서']     || '';
+  fillSpecForm(p.specTable);
 }
 
 // 삭제
@@ -1089,6 +1168,8 @@ document.getElementById('btnSave').addEventListener('click', async () => {
       '절수확인서':    document.getElementById('fDocWater').value.trim(),
       '환경표지인증서': document.getElementById('fDocEnv').value.trim(),
       '시공도면':      document.getElementById('fDocDraw').value.trim(),
+      'CAD':           document.getElementById('fDocCad').value.trim(),
+      '사용설명서':     document.getElementById('fDocManual').value.trim(),
     };
     for (const [key, url] of Object.entries(docInputMap)) {
       if (url) docs[key] = url;        // 입력됨 → 새 값
@@ -1103,7 +1184,8 @@ document.getElementById('btnSave').addEventListener('click', async () => {
       ...(editingId && PRODUCTS[editingId] ? PRODUCTS[editingId] : {}),
       brand, category, model, name,
       image: imagePath,
-      specs: getSpecs(),
+      specs: (editingId && PRODUCTS[editingId]?.specs) || {},
+      specTable: getSpecTable(model, name),   // 규격 정보 양식 → 상세페이지 "제품 상세 스펙" 표
       tags:  document.getElementById('fTags').value.split(',').map(t=>t.trim()).filter(Boolean),
       desc:  document.getElementById('fDesc').value.trim(),
       ...(Object.keys(docs).length ? { docs } : {}),
