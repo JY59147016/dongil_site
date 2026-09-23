@@ -6,7 +6,7 @@
   <title>수전금구 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260923">
+  <link rel="stylesheet" href="css/style.css?v=20260923c">
 </head>
 <body>
 
@@ -137,6 +137,7 @@
         <span>서류 다운로드</span>
         <span class="sidebar-badge" id="sidebarBadge" style="display:none">0</span>
       </div>
+      <p class="sidebar-limit">※ 최대 10개까지 선택할 수 있습니다.</p>
 
       <!-- 선택 없을 때 안내 -->
       <div class="sidebar-empty" id="sidebarEmpty">
@@ -258,7 +259,7 @@
       <button class="btn-select-all" id="btnSelectNone" style="display:none">전체 해제</button>
       <span class="result-count" id="resultCount"></span>
       <span id="selectCount" style="font-weight:600; color:var(--color-accent); display:none;"></span>
-      <span class="select-hint">제품을 선택하면 서류를 한 번에 다운로드할 수 있습니다</span>
+      <span class="select-hint">제품을 선택하면 서류를 한 번에 다운로드할 수 있습니다 (최대 10개)</span>
     </div>
 
     <!-- 결과 없음 -->
@@ -327,8 +328,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260923"></script>
-<script src="js/main.js?v=20260923"></script>
+<script src="js/products-data.js?v=20260923c"></script>
+<script src="js/main.js?v=20260923c"></script>
 <script>
 /* ── 수전금구 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
@@ -358,10 +359,7 @@
         <h3 class="product-name">${p.model}</h3>
         <div class="product-cert-logos">${logosHtml}</div>
         <p class="product-desc">${firstSpec}</p>
-        <div class="product-tags">${tagsHtml}</div>
-        <div class="qr-badge">📱 QR 스캔으로 상세 확인</div>
-        <a class="product-detail-btn product-detail-link" href="product.html?id=${id}">자세히 보기 →</a>
-      </div>`;
+        <div class="product-tags">${tagsHtml}</div>      </div>`;
     grid.appendChild(card);
   });
   /* 카드가 그려진 뒤 필터·제품 수 다시 계산 */
@@ -421,6 +419,10 @@
   const btnClear       = document.getElementById('btnClear');
   const toast          = document.getElementById('bulkToast');
 
+  /* 한 번에 선택할 수 있는 제품 수 */
+  const MAX_SELECT = 10;
+  const selectedCount = () => document.querySelectorAll('.product-card.selected').length;
+
   /* ── 1. 각 카드에 체크박스 추가 ── */
   document.querySelectorAll('.product-card').forEach(card => {
     const wrap = document.createElement('label');
@@ -431,6 +433,11 @@
     cb.type = 'checkbox';
     cb.className = 'card-checkbox';
     cb.addEventListener('change', () => {
+      if (cb.checked && selectedCount() >= MAX_SELECT) {
+        cb.checked = false;
+        showToast('제품은 최대 ' + MAX_SELECT + '개까지 선택할 수 있습니다.');
+        return;
+      }
       card.classList.toggle('selected', cb.checked);
       refresh();
     });
@@ -462,7 +469,7 @@
 
     /* 사이드바 배지 */
     if (sidebarBadge) {
-      sidebarBadge.textContent = n;
+      sidebarBadge.textContent = n + ' / ' + MAX_SELECT;
       sidebarBadge.style.display = n > 0 ? '' : 'none';
     }
 
@@ -525,13 +532,17 @@
     refresh();
   }
   if (btnAll)   btnAll.addEventListener('click', () => {
+    // 보이는 제품 중 앞에서부터 최대 10개까지만 선택
+    let skipped = 0;
     document.querySelectorAll('.product-card').forEach(card => {
-      if (card.style.display === 'none') return;
+      if (card.style.display === 'none' || card.classList.contains('selected')) return;
+      if (selectedCount() >= MAX_SELECT) { skipped++; return; }
       const cb = card.querySelector('.card-checkbox');
       if (cb) cb.checked = true;
       card.classList.add('selected');
     });
     refresh();
+    if (skipped) showToast('제품은 최대 ' + MAX_SELECT + '개까지 선택할 수 있어 앞의 ' + MAX_SELECT + '개만 선택했습니다.');
   });
   if (btnNone)  btnNone.addEventListener('click',  clearAll);
   if (btnClear) btnClear.addEventListener('click', clearAll);
@@ -561,14 +572,26 @@
   }
 
   /* ── 6. 파일 다운로드 ── */
-  function downloadFile(url, filename) {
-    const a = document.createElement('a');
-    a.href = url;
-    if (url.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener'; }
-    else a.download = filename || '';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+  /* 파일명에 쓸 수 없는 문자( / \ : * ? " < > | )는 - 로 바꿈 */
+  function safeName(s) { return String(s || '').replace(/[\\/:*?"<>|]+/g, '-').replace(/\s+/g, ' ').trim(); }
+
+  /* 파일을 받아서 지정한 이름으로 저장 — 브라우저에서 열리지 않고 바로 다운로드 */
+  async function downloadFile(url, filename) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(res.status);
+      const blobUrl = URL.createObjectURL(await res.blob());
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+    } catch (e) {
+      // 받아오지 못하면(내 PC에서 파일로 직접 열었을 때 등) 새 탭으로 열기
+      window.open(url, '_blank', 'noopener');
+    }
   }
 
   function bulkDownload(docKey) {
@@ -580,7 +603,10 @@
       const data = (typeof PRODUCTS !== 'undefined') ? PRODUCTS[id] : null;
       const url  = data && data.docs && data.docs[docKey];
       if (url && url !== '#') {
-        urls.push({ url, name: (data.model || id) + '_' + docKey + '.pdf' });
+        // 파일명: 브랜드_모델명_서류종류.확장자 (예: 계림바스_KLK-1190S_시험성적서.pdf)
+        const ext = ((url.split('?')[0].match(/\.([A-Za-z0-9]+)$/) || [])[1] || 'pdf').toLowerCase();
+        const fname = [data.brand, data.model, docKey].filter(Boolean).map(safeName).join('_') + '.' + ext;
+        urls.push({ url, name: fname });
       } else {
         missing.push(data ? (data.model || id) : id);
       }

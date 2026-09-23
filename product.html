@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260923">
+  <link rel="stylesheet" href="css/style.css?v=20260923c">
 </head>
 <body>
 
@@ -209,8 +209,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260923"></script>
-<script src="js/main.js?v=20260923"></script>
+<script src="js/products-data.js?v=20260923c"></script>
+<script src="js/main.js?v=20260923c"></script>
 <script>
 /* 제품 상세 페이지 렌더링 */
 (function() {
@@ -396,6 +396,29 @@
     { key: '사용설명서',     icon: '' },
   ];
   const docsEl = document.getElementById('pd-docs');
+  /* 파일명에 쓸 수 없는 문자( / \ : * ? " < > | )는 - 로 바꿈 */
+  const safeName = s => String(s || '').replace(/[\\/:*?"<>|]+/g, '-').replace(/\s+/g, ' ').trim();
+
+  /* 우리 사이트 파일과 서류 저장소(dongil_docs — CAD·사용설명서) 파일은 받아서
+     "브랜드_모델명_서류종류.확장자" 로 저장. 그 밖의 외부 링크는 그대로 열기 */
+  const RENAMEABLE = [location.origin, 'https://raw.githubusercontent.com/JY59147016/dongil_docs/'];
+  async function downloadAs(url, filename) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(res.status);
+      const blobUrl = URL.createObjectURL(await res.blob());
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+    } catch (e) {
+      window.open(url, '_blank', 'noopener');   // 받아오지 못하면(내 PC에서 파일로 열었을 때 등) 새 탭으로
+    }
+  }
+
   DOC_LIST.forEach(({ key, icon }) => {
     const url = p.docs && p.docs[key];
     const hasFile = url && url !== '#';
@@ -406,6 +429,14 @@
       a.rel = 'noopener';
       a.className = 'btn-doc';
       a.innerHTML = '<span class="doc-icon">' + icon + '</span>' + key;
+      const isOurFile = !/^https?:\/\//i.test(url) || RENAMEABLE.some(base => url.startsWith(base));
+      if (isOurFile) {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const ext = ((url.split('?')[0].match(/\.([A-Za-z0-9]+)$/) || [])[1] || 'pdf').toLowerCase();
+          downloadAs(url, [p.brand, p.model, key].map(safeName).filter(Boolean).join('_') + '.' + ext);
+        });
+      }
       docsEl.appendChild(a);
     } else {
       const span = document.createElement('span');

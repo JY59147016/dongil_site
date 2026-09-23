@@ -40,7 +40,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1190S.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1190S.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1190S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1190S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1190S.dwg',
     },
   },
   'gyerim-KLB-1000C': {
@@ -58,7 +58,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLB-1000C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLB-1000C.pdf',
       시공도면: 'docs/drawings/gyerim/KLB-1000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LB1000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLB-1000C.dwg',
     },
   },
   'gyerim-KLO-1701STD': {
@@ -75,8 +75,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLO-1701STD.pdf',
       시공도면: 'docs/drawings/gyerim/KLO-1701STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLO1701ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLO1701ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLO-1701STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLO-1701STD.pdf',
     },
   },
   'gyerim-KLO-1701STPD': {
@@ -93,8 +93,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLO-1701STPD.pdf',
       시공도면: 'docs/drawings/gyerim/KLO-1701STPD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLO1701STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLO1701STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLO-1701STPD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLO-1701STPD.pdf',
     },
   },
   'gyerim-KLZ-080C': {
@@ -111,7 +111,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLZ-080C.pdf',
       시공도면: 'docs/drawings/gyerim/KLZ-080C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LZ080C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLZ-080C.dwg',
     },
   },
   'gyerim-KLB-030C': {
@@ -129,8 +129,8 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLB-030C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLB-030C.pdf',
       시공도면: 'docs/drawings/gyerim/KLB-030C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LB030C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LB030C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLB-030C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLB-030C.pdf',
     },
   },
   'gyerim-KL-1500ST': {
@@ -148,8 +148,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1500ST.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1500ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1500ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KL1500ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1500ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KL-1500ST.pdf',
     },
   },
   'gyerim-KL-1500STP': {
@@ -165,8 +165,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KL-1500STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1500STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KL1500STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1500STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KL-1500STP.pdf',
     },
   },
   'gyerim-KLP-057C': {
@@ -183,7 +183,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLP-057C.pdf',
       시공도면: 'docs/drawings/gyerim/KLP-057C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LP057C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLP-057C.dwg',
     },
   },
   'gyerim-KLP-050C': {
@@ -200,7 +200,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLP-050C.pdf',
       시공도면: 'docs/drawings/gyerim/KLP-050C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LP050C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLP-050C.dwg',
     },
   },
   'gyerim-KLR-047C': {
@@ -217,7 +217,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLR-047C.pdf',
       시공도면: 'docs/drawings/gyerim/KLR-047C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LR047C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLR-047C.dwg',
     },
   },
   'gyerim-KLR-042C': {
@@ -234,7 +234,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLR-042C.pdf',
       시공도면: 'docs/drawings/gyerim/KLR-042C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LR042C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLR-042C.dwg',
     },
   },
   'gyerim-KLU-970CD': {
@@ -251,7 +251,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLU-970CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLU-970CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LU970C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLU-970CD.dwg',
     },
   },
   'gyerim-KLU-950CD': {
@@ -268,7 +268,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLU-950CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLU-950CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LU950C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLU-950CD.dwg',
     },
   },
   'gyerim-KLU-920CD': {
@@ -284,7 +284,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLU-920CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLU-920CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LU920C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLU-920CD.dwg',
     },
   },
   'gyerim-KLU-900CD': {
@@ -302,7 +302,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLU-900CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLU-900CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLU-900CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LU900C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLU-900CD.dwg',
     },
   },
   'gyerim-KLD-800C': {
@@ -320,7 +320,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLD-800C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLD-800C.pdf',
       시공도면: 'docs/drawings/gyerim/KLD-800C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LD800C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLD-800C.zip',
     },
   },
   'gyerim-KLS-770C': {
@@ -337,7 +337,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLS-770C.pdf',
       시공도면: 'docs/drawings/gyerim/KLS-770C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LS770C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLS-770C.zip',
     },
   },
   'gyerim-KLS-700C': {
@@ -354,7 +354,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLS-700C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLS-700C.pdf',
       시공도면: 'docs/drawings/gyerim/KLS-700C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LS700C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLS-700C.zip',
     },
   },
   'gyerim-KL-700C': {
@@ -372,7 +372,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KL-700C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KL-700C.pdf',
       시공도면: 'docs/drawings/gyerim/KL-700C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL700C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-700C.dwg',
     },
   },
   'gyerim-KLN-510C': {
@@ -390,7 +390,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLN-510C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLN-510C.pdf',
       시공도면: 'docs/drawings/gyerim/KLN-510C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LN510C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLN-510C.zip',
     },
   },
   'gyerim-KLK-1190G': {
@@ -408,7 +408,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1190G.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1190G.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1190G.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1190G',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1190G.dwg',
     },
   },
   'gyerim-KL-510C': {
@@ -425,7 +425,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-510C.pdf',
       시공도면: 'docs/drawings/gyerim/KL-510C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL510C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-510C.zip',
     },
   },
   'gyerim-KLW-200C': {
@@ -443,7 +443,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLW-200C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLW-200C.pdf',
       시공도면: 'docs/drawings/gyerim/KLW-200C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LW200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLW-200C.dwg',
     },
   },
   'gyerim-KLA-150C': {
@@ -460,7 +460,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLA-150C.pdf',
       시공도면: 'docs/drawings/gyerim/KLA-150C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LA150C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLA-150C.zip',
     },
   },
   'gyerim-KLI-077C': {
@@ -522,7 +522,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLJ-067C.pdf',
       시공도면: 'docs/drawings/gyerim/KLJ-067C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LJ067C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLJ-067C.dwg',
     },
   },
   'gyerim-KLJ-065C': {
@@ -539,7 +539,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLJ-065C.pdf',
       시공도면: 'docs/drawings/gyerim/KLJ-065C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LJ065C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLJ-065C.dwg',
     },
   },
   'gyerim-KLJ-062C': {
@@ -556,7 +556,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLJ-062C.pdf',
       시공도면: 'docs/drawings/gyerim/KLJ-062C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LJ062C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLJ-062C.dwg',
     },
   },
   'gyerim-KLJ-060C': {
@@ -573,7 +573,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLJ-060C.pdf',
       시공도면: 'docs/drawings/gyerim/KLJ-060C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LJ060C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLJ-060C.dwg',
     },
   },
   'gyerim-KLK-1190CD': {
@@ -591,7 +591,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1190CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1190CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1190CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1190C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1190CD.dwg',
     },
   },
   'gyerim-KLR-040C': {
@@ -608,7 +608,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLR-040C.pdf',
       시공도면: 'docs/drawings/gyerim/KLR-040C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LR040C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLR-040C.dwg',
     },
   },
   'gyerim-KLX-3000C': {
@@ -625,7 +625,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLX-3000C.pdf',
       시공도면: 'docs/drawings/gyerim/KLX-3000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LX3000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLX-3000C.dwg',
     },
   },
   'gyerim-KLX-2000C': {
@@ -642,7 +642,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLX-2000C.pdf',
       시공도면: 'docs/drawings/gyerim/KLX-2000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LX2000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLX-2000C.dwg',
     },
   },
   'gyerim-KLV-1870STD': {
@@ -659,8 +659,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLV-1870STD.pdf',
       시공도면: 'docs/drawings/gyerim/KLV-1870STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLV1870ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLV1870ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLV-1870STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLV-1870STD.pdf',
     },
   },
   'gyerim-KLV-1800STD': {
@@ -678,8 +678,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLV-1800STD.pdf',
       시공도면: 'docs/drawings/gyerim/KLV-1800STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLV1800ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLV1800ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLV-1800STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLV-1800STD.pdf',
     },
   },
   'gyerim-KLO-1700STD': {
@@ -696,8 +696,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLO-1700STD.pdf',
       시공도면: 'docs/drawings/gyerim/KLO-1700STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LO1700ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LO1700ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLO-1700STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLO-1700STD.pdf',
     },
   },
   'gyerim-KLM-1600CD': {
@@ -714,7 +714,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLM-1600CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLM-1600CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LM1600C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLM-1600CD.dwg',
     },
   },
   'gyerim-KL-1600STP': {
@@ -730,7 +730,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KL-1600STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1600STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1600STP.dwg',
     },
   },
   'gyerim-KL-1600ST': {
@@ -747,7 +747,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1600ST.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1600ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1600ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1600ST.dwg',
     },
   },
   'gyerim-KLF-1590STP': {
@@ -764,7 +764,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLF-1590STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLF1590STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLF-1590STP.dwg',
     },
   },
   'gyerim-KLK-1190B': {
@@ -782,7 +782,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1190B.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1190B.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1190B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1190B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1190B.dwg',
     },
   },
   'gyerim-KLF-1590ST': {
@@ -800,7 +800,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLF-1590ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLF-1590ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLF1590ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLF-1590ST.dwg',
     },
   },
   'gyerim-KLF-1500STP': {
@@ -817,7 +817,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLF-1500STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLF1500STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLF-1500STP.dwg',
     },
   },
   'gyerim-KLF-1500ST': {
@@ -835,7 +835,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLF-1500ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLF-1500ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLF1500ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLF-1500ST.dwg',
     },
   },
   'gyerim-KLH-1470STP': {
@@ -852,7 +852,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLH-1470STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLH1470STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLH-1470STP.dwg',
     },
   },
   'gyerim-KLH-1470ST': {
@@ -870,7 +870,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLH-1470ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLH-1470ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLH1470ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLH-1470ST.dwg',
     },
   },
   'gyerim-KLH-1400STP': {
@@ -887,7 +887,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLH-1400STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLH1400STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLH-1400STP.dwg',
     },
   },
   'gyerim-KLH-1400ST': {
@@ -905,7 +905,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLH-1400ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLH-1400ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLH1400ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLH-1400ST.dwg',
     },
   },
   'gyerim-KL-1400C': {
@@ -922,7 +922,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1400C.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1400C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1400C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1400C.dwg',
     },
   },
   'gyerim-KL-1300D': {
@@ -939,7 +939,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1300D.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1300D.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1300D',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1300D.dwg',
     },
   },
   'gyerim-KL-1200C': {
@@ -956,7 +956,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1200C.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1200C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1200C.dwg',
     },
   },
   'gyerim-KLK-1100S': {
@@ -974,7 +974,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1100S.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1100S.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1100S.dwg',
     },
   },
   'gyerim-KL-1100C': {
@@ -991,7 +991,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1100C.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1100C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1100C.dwg',
     },
   },
   'gyerim-KLX-1000C': {
@@ -1009,7 +1009,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLX-1000C.pdf',
       시공도면: 'docs/drawings/gyerim/KLX-1000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LX1000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLX-1000C.dwg',
     },
   },
   'gyerim-KL-1000C': {
@@ -1026,7 +1026,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-1000C.pdf',
       시공도면: 'docs/drawings/gyerim/KL-1000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL1000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-1000C.dwg',
     },
   },
   'gyerim-KL-900ST': {
@@ -1043,7 +1043,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KL-900ST.pdf',
       시공도면: 'docs/drawings/gyerim/KL-900ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KL900ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KL-900ST.dwg',
     },
   },
   'gyerim-KLBC-290S': {
@@ -1060,8 +1060,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBC-290S.pdf',
       시공도면: 'docs/drawings/gyerim/KLBC-290S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC290S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC290S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-290S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-290S.pdf',
     },
   },
   'gyerim-KLBC-290P': {
@@ -1078,8 +1078,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBC-290P.pdf',
       시공도면: 'docs/drawings/gyerim/KLBC-290P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC290P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC290P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-290P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-290P.pdf',
     },
   },
   'gyerim-KLBC-290C': {
@@ -1096,8 +1096,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBC-290C.pdf',
       시공도면: 'docs/drawings/gyerim/KLBC-290C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC290C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC290C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-290C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-290C.pdf',
     },
   },
   'gyerim-KLBC-200S': {
@@ -1114,8 +1114,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBC-200S.pdf',
       시공도면: 'docs/drawings/gyerim/KLBC-200S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC200S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC200S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-200S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-200S.pdf',
     },
   },
   'gyerim-KLBA-200P': {
@@ -1132,8 +1132,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBA-200P.pdf',
       시공도면: 'docs/drawings/gyerim/KLBA-200P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC200P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC200P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBA-200P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBA-200P.pdf',
     },
   },
   'gyerim-KLBA-200CD': {
@@ -1150,8 +1150,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBA-200CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLBA-200CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC200C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBA-200CD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBA-200CD.pdf',
     },
   },
   'gyerim-KLK-1100G': {
@@ -1169,7 +1169,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1100G.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1100G.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1100G.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1100G',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1100G.dwg',
     },
   },
   'gyerim-KLAC-190S': {
@@ -1186,8 +1186,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLAC-190S.pdf',
       시공도면: 'docs/drawings/gyerim/KLAC-190S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLAC190S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLAC190S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLAC-190S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLAC-190S.pdf',
     },
   },
   'gyerim-KLAC-190C': {
@@ -1204,8 +1204,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLAC-190C.pdf',
       시공도면: 'docs/drawings/gyerim/KLAC-190C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLAC190C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLAC190C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLAC-190C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLAC-190C.pdf',
     },
   },
   'gyerim-KLAC-100S': {
@@ -1222,8 +1222,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLAC-100S.pdf',
       시공도면: 'docs/drawings/gyerim/KLAC-100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLAC100S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLAC100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLAC-100S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLAC-100S.pdf',
     },
   },
   'gyerim-KLAC-100CD': {
@@ -1240,8 +1240,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLAC-100CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLAC-100CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLAC100C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLAC100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLAC-100CD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLAC-100CD.pdf',
     },
   },
   'gyerim-KLCC-300C': {
@@ -1258,7 +1258,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-300C.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-300C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC300C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-300C.dwg',
     },
   },
   'gyerim-KLCC-300S': {
@@ -1275,7 +1275,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-300S.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-300S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC300S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-300S.dwg',
     },
   },
   'gyerim-KLCC-300P': {
@@ -1292,7 +1292,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-300P.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-300P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC300P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-300P.dwg',
     },
   },
   'gyerim-KLCC-370C': {
@@ -1308,8 +1308,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLCC-370C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC370C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLCC370C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-370C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLCC-370C.pdf',
     },
   },
   'gyerim-KLCC-370S': {
@@ -1326,8 +1326,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-370S.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-370S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC370S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLCC370S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-370S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLCC-370S.pdf',
     },
   },
   'gyerim-KLCC-370P': {
@@ -1344,8 +1344,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-370P.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-370P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC370P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLCC370P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-370P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLCC-370P.pdf',
     },
   },
   'gyerim-KLK-1100CD': {
@@ -1363,7 +1363,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1100CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1100CD.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1100CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1100CD.dwg',
     },
   },
   'gyerim-KLCC-390C': {
@@ -1380,8 +1380,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-390C.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-390C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC390C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLCC390C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-390C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLCC-390C.pdf',
     },
   },
   'gyerim-KLCC-390S': {
@@ -1398,8 +1398,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-390S.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-390S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC390S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLCC390S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-390S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLCC-390S.pdf',
     },
   },
   'gyerim-KLCC-390P': {
@@ -1416,8 +1416,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLCC-390P.pdf',
       시공도면: 'docs/drawings/gyerim/KLCC-390P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLCC390P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLCC390P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLCC-390P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLCC-390P.pdf',
     },
   },
   'gyerim-KLXC-2100C': {
@@ -1433,8 +1433,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLXC-2100C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLXC2100C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLXC2100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLXC-2100C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLXC-2100C.pdf',
     },
   },
   'gyerim-KLXC-2100P': {
@@ -1450,8 +1450,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLXC-2100P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLXC2100P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLXC2100P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLXC-2100P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLXC-2100P.pdf',
     },
   },
   'gyerim-KLXC-2190C': {
@@ -1467,8 +1467,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLXC-2190C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLXC2190C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLXC2190C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLXC-2190C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLXC-2190C.pdf',
     },
   },
   'gyerim-KLXC-2190S': {
@@ -1484,8 +1484,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLXC-2190S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLXC2190S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLXC2190S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLXC-2190S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLXC-2190S.pdf',
     },
   },
   'gyerim-KLXC-2190P': {
@@ -1501,8 +1501,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLXC-2190P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLXC2190P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLXC2190P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLXC-2190P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLXC-2190P.pdf',
     },
   },
   'gyerim-KLSC-2600ST': {
@@ -1519,8 +1519,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLSC-2600ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLSC-2600ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLSC2600ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLSC2600ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLSC-2600ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLSC-2600ST.pdf',
     },
   },
   'gyerim-KLSC-2600STP': {
@@ -1537,8 +1537,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLSC-2600STP.pdf',
       시공도면: 'docs/drawings/gyerim/KLSC-2600STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLSC2600STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLSC2600STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLSC-2600STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLSC-2600STP.pdf',
     },
   },
   'gyerim-KLK-1100B': {
@@ -1556,7 +1556,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLK-1100B.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLK-1100B.pdf',
       시공도면: 'docs/drawings/gyerim/KLK-1100B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LK1100B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLK-1100B.dwg',
     },
   },
   'gyerim-KLSC-2690ST': {
@@ -1573,8 +1573,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLSC-2690ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLSC-2690ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLSC2690ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLSC2690ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLSC-2690ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLSC-2690ST.pdf',
     },
   },
   'gyerim-KLSC-2690STP': {
@@ -1591,8 +1591,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLSC-2690STP.pdf',
       시공도면: 'docs/drawings/gyerim/KLSC-2690STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLSC2690STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLSC2690STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLSC-2690STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLSC-2690STP.pdf',
     },
   },
   'gyerim-KLTC-2500ST': {
@@ -1609,8 +1609,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLTC-2500ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLTC-2500ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLTC2500ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLTC2500ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLTC-2500ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLTC-2500ST.pdf',
     },
   },
   'gyerim-KLTC-2500STP': {
@@ -1627,8 +1627,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLTC-2500STP.pdf',
       시공도면: 'docs/drawings/gyerim/KLTC-2500STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLTC2500STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLTC2500STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLTC-2500STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLTC-2500STP.pdf',
     },
   },
   'gyerim-KLTC-2590ST': {
@@ -1645,8 +1645,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLTC-2590ST.pdf',
       시공도면: 'docs/drawings/gyerim/KLTC-2590ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLTC2590ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLTC2590ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLTC-2590ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLTC-2590ST.pdf',
     },
   },
   'gyerim-KLTC-2590STP': {
@@ -1663,8 +1663,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLTC-2590STP.pdf',
       시공도면: 'docs/drawings/gyerim/KLTC-2590STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLTC2590STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLTC2590STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLTC-2590STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLTC-2590STP.pdf',
     },
   },
   'gyerim-KLUC-2400ST': {
@@ -1680,8 +1680,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLUC-2400ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLUC2400ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLUC2400ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLUC-2400ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLUC-2400ST.pdf',
     },
   },
   'gyerim-KLUC-2400STP': {
@@ -1697,8 +1697,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLUC-2400STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLUC2400STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLUC2400STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLUC-2400STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLUC-2400STP.pdf',
     },
   },
   'gyerim-KLUC-2490ST': {
@@ -1714,8 +1714,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLUC-2490ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLUC2490ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLUC2490ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLUC-2490ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLUC-2490ST.pdf',
     },
   },
   'gyerim-KLUC-2490STP': {
@@ -1731,8 +1731,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLUC-2490STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLUC2490STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLUC2490STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLUC-2490STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLUC-2490STP.pdf',
     },
   },
   'gyerim-KLB-1070C': {
@@ -1749,7 +1749,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLB-1070C.pdf',
       시공도면: 'docs/drawings/gyerim/KLB-1070C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LB1070C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLB-1070C.dwg',
     },
   },
   'gyerim-KLV-1800STPD': {
@@ -1778,8 +1778,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLV-1870STPD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLV1870STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLV1870STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLV-1870STPD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLV-1870STPD.pdf',
     },
   },
   'gyerim-KLVC-2300ST': {
@@ -1795,8 +1795,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLVC-2300ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLVC2300ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLVC2300ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLVC-2300ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLVC-2300ST.pdf',
     },
   },
   'gyerim-KLVC-2390STP': {
@@ -1812,8 +1812,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLVC-2390STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLVC2390STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLVC2390STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLVC-2390STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLVC-2390STP.pdf',
     },
   },
   'gyerim-KLVC-2300STP': {
@@ -1829,8 +1829,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLVC-2300STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLVC2300STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLVC2300STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLVC-2300STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLVC-2300STP.pdf',
     },
   },
   'gyerim-KLVC-2390ST': {
@@ -1846,8 +1846,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLVC-2390ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLVC2390ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLVC2390ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLVC-2390ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLVC-2390ST.pdf',
     },
   },
   'gyerim-KLAC-170S': {
@@ -1864,8 +1864,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLAC-170S.pdf',
       시공도면: 'docs/drawings/gyerim/KLAC-170S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLAC170S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLAC170S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLAC-170S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLAC-170S.pdf',
     },
   },
   'gyerim-KLBC-270C': {
@@ -1881,8 +1881,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KLBC-270C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC270C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC270C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-270C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-270C.pdf',
     },
   },
   'gyerim-KLBC-270S': {
@@ -1899,8 +1899,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBC-270S.pdf',
       시공도면: 'docs/drawings/gyerim/KLBC-270S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC270S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC270S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-270S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-270S.pdf',
     },
   },
   'gyerim-KLBC-270P': {
@@ -1918,8 +1918,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLBC-270P.pdf',
       시공도면: 'docs/drawings/gyerim/KLBC-270P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLBC270P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KLBC270P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLBC-270P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLBC-270P.pdf',
     },
   },
   'gyerim-KBT-4700': {
@@ -1937,7 +1937,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBT-4700.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBT-4700.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-4700.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT4700',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-4700.zip',
     },
   },
   'gyerim-KBT-4500': {
@@ -1955,7 +1955,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBT-4500.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBT-4500.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-4500.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT4500',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-4500.zip',
     },
   },
   'gyerim-KBT-4000': {
@@ -1972,7 +1972,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBT-4000.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-4000.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT4000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-4000.zip',
     },
   },
   'gyerim-KBT-3000': {
@@ -1990,7 +1990,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBT-3000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBT-3000.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-3000.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT3000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-3000.zip',
     },
   },
   'gyerim-KBT-2000': {
@@ -2008,7 +2008,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBT-2000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBT-2000.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-2000.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT2000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-2000.zip',
     },
   },
   'gyerim-KBT-1700': {
@@ -2026,7 +2026,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBT-1700.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBT-1700.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-1700.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT1700',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-1700.zip',
     },
   },
   'gyerim-KBT-1500': {
@@ -2044,7 +2044,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBT-1500.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBT-1500.pdf',
       시공도면: 'docs/drawings/gyerim/KBT-1500.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBT1500',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBT-1500.zip',
     },
   },
   'gyerim-KBK-1100S': {
@@ -2062,7 +2062,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBK-1100S.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBK-1100S.pdf',
       시공도면: 'docs/drawings/gyerim/KBK-1100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BK1100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBK-1100S.dwg',
     },
   },
   'gyerim-KBK-1100G': {
@@ -2080,7 +2080,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBK-1100G.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBK-1100G.pdf',
       시공도면: 'docs/drawings/gyerim/KBK-1100G.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BK1100G',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBK-1100G.dwg',
     },
   },
   'gyerim-KBK-1100C': {
@@ -2098,7 +2098,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBK-1100C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBK-1100C.pdf',
       시공도면: 'docs/drawings/gyerim/KBK-1100C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BK1100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBK-1100C.dwg',
     },
   },
   'gyerim-KBK-1100B': {
@@ -2116,7 +2116,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBK-1100B.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBK-1100B.pdf',
       시공도면: 'docs/drawings/gyerim/KBK-1100B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BK1100B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBK-1100B.dwg',
     },
   },
   'gyerim-KBB-1000C': {
@@ -2134,7 +2134,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBB-1000C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBB-1000C.pdf',
       시공도면: 'docs/drawings/gyerim/KBB-1000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BB1000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBB-1000C.dwg',
     },
   },
   'gyerim-KBU-980CD': {
@@ -2152,7 +2152,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBU-980CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBU-980CD.pdf',
       시공도면: 'docs/drawings/gyerim/KBU-980CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BU980C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBU-980CD.dwg',
     },
   },
   'gyerim-KBU-970CD': {
@@ -2170,7 +2170,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBU-970CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBU-970CD.pdf',
       시공도면: 'docs/drawings/gyerim/KBU-970CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BU970C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBU-970CD.dwg',
     },
   },
   'gyerim-KBU-950CD': {
@@ -2188,7 +2188,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBU-950CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBU-950CD.pdf',
       시공도면: 'docs/drawings/gyerim/KBU-950CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BU950C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBU-950CD.dwg',
     },
   },
   'gyerim-KBU-900CD': {
@@ -2206,7 +2206,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBU-900CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBU-900CD.pdf',
       시공도면: 'docs/drawings/gyerim/KBU-900CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BU900C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBU-900CD.dwg',
     },
   },
   'gyerim-KBD-800C': {
@@ -2224,7 +2224,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBD-800C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBD-800C.pdf',
       시공도면: 'docs/drawings/gyerim/KBD-800C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BD800C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBD-800C.zip',
     },
   },
   'gyerim-KBS-700C': {
@@ -2242,7 +2242,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBS-700C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBS-700C.pdf',
       시공도면: 'docs/drawings/gyerim/KBS-700C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BS700C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBS-700C.zip',
     },
   },
   'gyerim-KBS-520C': {
@@ -2259,7 +2259,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBS-520C.pdf',
       시공도면: 'docs/drawings/gyerim/KBS-520C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBS520C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBS-520C.dwg',
     },
   },
   'gyerim-KBN-500C': {
@@ -2277,7 +2277,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBN-500C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBN-500C.pdf',
       시공도면: 'docs/drawings/gyerim/KBN-500C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BN500C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBN-500C.zip',
     },
   },
   'gyerim-KBW-200C': {
@@ -2295,7 +2295,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KBW-200C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KBW-200C.pdf',
       시공도면: 'docs/drawings/gyerim/KBW-200C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BW200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBW-200C.zip',
     },
   },
   'gyerim-KBI-070C': {
@@ -2327,8 +2327,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBJ-060C.pdf',
       시공도면: 'docs/drawings/gyerim/KBJ-060C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBJ060C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBJ060C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBJ-060C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBJ-060C.pdf',
     },
   },
   'gyerim-KBP-050C': {
@@ -2345,7 +2345,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBP-050C.pdf',
       시공도면: 'docs/drawings/gyerim/KBP-050C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BP050C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBP-050C.dwg',
     },
   },
   'gyerim-KBR-040C': {
@@ -2362,7 +2362,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBR-040C.pdf',
       시공도면: 'docs/drawings/gyerim/KBR-040C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BR040C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBR-040C.dwg',
     },
   },
   'gyerim-KBX-2000C': {
@@ -2379,7 +2379,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBX-2000C.pdf',
       시공도면: 'docs/drawings/gyerim/KBX-2000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BX2000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBX-2000C.dwg',
     },
   },
   'gyerim-KBO-1750ST': {
@@ -2396,8 +2396,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBO-1750ST.pdf',
       시공도면: 'docs/drawings/gyerim/KBO-1750ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBO1750ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBO1750ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBO-1750ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBO-1750ST.pdf',
     },
   },
   'gyerim-KBO-1700ST': {
@@ -2414,8 +2414,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBO-1700ST.pdf',
       시공도면: 'docs/drawings/gyerim/KBO-1700ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BO1700ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/BO1700ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBO-1700ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBO-1700ST.pdf',
     },
   },
   'gyerim-KBM-1600C': {
@@ -2432,7 +2432,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBM-1600C.pdf',
       시공도면: 'docs/drawings/gyerim/KBM-1600C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BM1600C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBM-1600C.dwg',
     },
   },
   'gyerim-KBF-1500STP': {
@@ -2449,7 +2449,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBF-1500STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBF1500STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBF-1500STP.dwg',
     },
   },
   'gyerim-KBF-1500ST': {
@@ -2467,7 +2467,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBF-1500ST.pdf',
       시공도면: 'docs/drawings/gyerim/KBF-1500ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBF1500ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBF-1500ST.dwg',
     },
   },
   'gyerim-KBH-1400STP': {
@@ -2484,7 +2484,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBH-1400STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBH1400STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBH-1400STP.dwg',
     },
   },
   'gyerim-KBH-1400ST': {
@@ -2502,7 +2502,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBH-1400ST.pdf',
       시공도면: 'docs/drawings/gyerim/KBH-1400ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBH1400ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBH-1400ST.dwg',
     },
   },
   'gyerim-KBBC-200S': {
@@ -2519,8 +2519,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBBC-200S.pdf',
       시공도면: 'docs/drawings/gyerim/KBBC-200S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBBC200S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBBC200S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBBC-200S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBBC-200S.pdf',
     },
   },
   'gyerim-KBBC-200P': {
@@ -2537,8 +2537,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBBC-200P.pdf',
       시공도면: 'docs/drawings/gyerim/KBBC-200P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBBC200P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBBC200P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBBC-200P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBBC-200P.pdf',
     },
   },
   'gyerim-KBBC-200CD': {
@@ -2555,8 +2555,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBBC-200CD.pdf',
       시공도면: 'docs/drawings/gyerim/KBBC-200CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBBC200C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBBC200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBBC-200CD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBBC-200CD.pdf',
     },
   },
   'gyerim-KBAC-100SD': {
@@ -2573,8 +2573,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBAC-100SD.pdf',
       시공도면: 'docs/drawings/gyerim/KBAC-100SD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBAC100S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBAC100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBAC-100SD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBAC-100SD.pdf',
     },
   },
   'gyerim-KBAC-100C': {
@@ -2591,8 +2591,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBAC-100C.pdf',
       시공도면: 'docs/drawings/gyerim/KBAC-100C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBAC100C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBAC100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBAC-100C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBAC-100C.pdf',
     },
   },
   'gyerim-KBV-1800STPD': {
@@ -2623,8 +2623,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBV-1800STD.pdf',
       시공도면: 'docs/drawings/gyerim/KBV-1800STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBV1800ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBV1800ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBV-1800STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBV-1800STD.pdf',
     },
   },
   'gyerim-KBCC-300C': {
@@ -2641,8 +2641,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBCC-300C.pdf',
       시공도면: 'docs/drawings/gyerim/KBCC-300C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBCC300C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBCC300C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBCC-300C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBCC-300C.pdf',
     },
   },
   'gyerim-KBCC-300S': {
@@ -2659,8 +2659,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBCC-300S.pdf',
       시공도면: 'docs/drawings/gyerim/KBCC-300S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBCC300S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBCC300S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBCC-300S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBCC-300S.pdf',
     },
   },
   'gyerim-KBCC-300P': {
@@ -2677,8 +2677,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBCC-300P.pdf',
       시공도면: 'docs/drawings/gyerim/KBCC-300P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBCC300P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBCC300P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBCC-300P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBCC-300P.pdf',
     },
   },
   'gyerim-KBXC-2100C': {
@@ -2694,8 +2694,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBXC-2100C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBXC2100C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBXC2100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBXC-2100C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBXC-2100C.pdf',
     },
   },
   'gyerim-KBXC-2100S': {
@@ -2711,8 +2711,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBXC-2100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBXC2100S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBXC2100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBXC-2100S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBXC-2100S.pdf',
     },
   },
   'gyerim-KBXC-2100P': {
@@ -2728,8 +2728,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBXC-2100P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBXC2100P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBXC2100P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBXC-2100P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBXC-2100P.pdf',
     },
   },
   'gyerim-KBSC-2600ST': {
@@ -2746,8 +2746,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBSC-2600ST.pdf',
       시공도면: 'docs/drawings/gyerim/KBSC-2600ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBSC2600ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBSC2600ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBSC-2600ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBSC-2600ST.pdf',
     },
   },
   'gyerim-KBSC-2600STP': {
@@ -2763,8 +2763,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBSC-2600STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBSC2600STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBSC2600STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBSC-2600STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBSC-2600STP.pdf',
     },
   },
   'gyerim-KBTC-2500ST': {
@@ -2781,8 +2781,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBTC-2500ST.pdf',
       시공도면: 'docs/drawings/gyerim/KBTC-2500ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBTC2500ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBTC2500ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBTC-2500ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBTC-2500ST.pdf',
     },
   },
   'gyerim-KBTC-2500STP': {
@@ -2799,8 +2799,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBTC-2500STP.pdf',
       시공도면: 'docs/drawings/gyerim/KBTC-2500STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBTC2500STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBTC2500STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBTC-2500STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBTC-2500STP.pdf',
     },
   },
   'gyerim-KBUC-2400ST': {
@@ -2816,8 +2816,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBUC-2400ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBUC2400ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBUC2400ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBUC-2400ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBUC-2400ST.pdf',
     },
   },
   'gyerim-KBUC-2400STP': {
@@ -2833,8 +2833,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBUC-2400STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBUC2400STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBUC2400STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBUC-2400STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBUC-2400STP.pdf',
     },
   },
   'gyerim-KBVC-2300ST': {
@@ -2850,8 +2850,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBVC-2300ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBVC2300ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBVC2300ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBVC-2300ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBVC-2300ST.pdf',
     },
   },
   'gyerim-KBVC-2300STP': {
@@ -2867,8 +2867,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBVC-2300STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBVC2300STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBVC2300STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBVC-2300STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBVC-2300STP.pdf',
     },
   },
   'gyerim-KBZ-080C': {
@@ -2885,7 +2885,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KBZ-080C.pdf',
       시공도면: 'docs/drawings/gyerim/KBZ-080C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/BZ080C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBZ-080C.dwg',
     },
   },
   'gyerim-KBO-1700STP': {
@@ -2901,8 +2901,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBO-1700STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBO1700STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBO1700STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBO-1700STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBO-1700STP.pdf',
     },
   },
   'gyerim-KBO-1750STP': {
@@ -2918,8 +2918,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBO-1750STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBO1750STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBO1750STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBO-1750STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBO-1750STP.pdf',
     },
   },
   'gyerim-KSS-2000C': {
@@ -2937,7 +2937,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSS-2000C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSS-2000C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-2000C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS2000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-2000C.dwg',
     },
   },
   'gyerim-KSS-1000C': {
@@ -2955,7 +2955,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSS-1000C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSS-1000C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-1000C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS1000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-1000C.dwg',
     },
   },
   'gyerim-KSU-990CD': {
@@ -2972,7 +2972,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSU-990CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-990CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU990C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-990CD.dwg',
     },
   },
   'gyerim-KSU-970CD': {
@@ -2989,7 +2989,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSU-970CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-970CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU970C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-970CD.dwg',
     },
   },
   'gyerim-KSU-950CD': {
@@ -3006,7 +3006,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSU-950CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-950CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU950C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-950CD.dwg',
     },
   },
   'gyerim-KSU-930CD': {
@@ -3024,7 +3024,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSU-930CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSU-930CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-930CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU930C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-930CD.dwg',
     },
   },
   'gyerim-KSU-920CD': {
@@ -3041,7 +3041,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSU-920CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-920CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU920C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-920CD.dwg',
     },
   },
   'gyerim-KSU-910CD': {
@@ -3059,7 +3059,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSU-910CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSU-910CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-910CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU910C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-910CD.dwg',
     },
   },
   'gyerim-KSU-900CD': {
@@ -3077,7 +3077,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSU-900CD.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSU-900CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSU-900CD.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SU900C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSU-900CD.dwg',
     },
   },
   'gyerim-KSD-800C': {
@@ -3095,7 +3095,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSD-800C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSD-800C.pdf',
       시공도면: 'docs/drawings/gyerim/KSD-800C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SD800C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSD-800C.zip',
     },
   },
   'gyerim-KSS-700C': {
@@ -3112,7 +3112,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-700C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-700C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS700C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-700C.zip',
     },
   },
   'gyerim-KSN-500C': {
@@ -3129,7 +3129,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSN-500C.pdf',
       시공도면: 'docs/drawings/gyerim/KSN-500C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SN500C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSN-500C.zip',
     },
   },
   'gyerim-KSW-200C': {
@@ -3147,7 +3147,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSW-200C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSW-200C.pdf',
       시공도면: 'docs/drawings/gyerim/KSW-200C.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SW200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSW-200C.zip',
     },
   },
   'gyerim-KSI-073C': {
@@ -3180,7 +3180,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSJ-060C.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSJ-060C.pdf',
       시공도면: 'docs/drawings/gyerim/KSJ-060C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SJ060C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSJ-060C.dwg',
     },
   },
   'gyerim-KSR-040C': {
@@ -3197,7 +3197,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSR-040C.pdf',
       시공도면: 'docs/drawings/gyerim/KSR-040C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SR040C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSR-040C.dwg',
     },
   },
   'gyerim-KSS-5100ST': {
@@ -3214,7 +3214,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-5100ST.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-5100ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSS5100ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-5100ST.dwg',
     },
   },
   'gyerim-KSS-5000ST': {
@@ -3231,7 +3231,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-5000ST.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-5000ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSS5000ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-5000ST.dwg',
     },
   },
   'gyerim-KSS-4200S': {
@@ -3247,7 +3247,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSS-4200S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS4200S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-4200S.dwg',
     },
   },
   'gyerim-KSS-4200C': {
@@ -3264,7 +3264,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-4200C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-4200C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS4200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-4200C.dwg',
     },
   },
   'gyerim-KSS-4100S': {
@@ -3281,7 +3281,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-4100S.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-4100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS4100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-4100S.dwg',
     },
   },
   'gyerim-KSS-4100C': {
@@ -3298,7 +3298,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-4100C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-4100C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS4100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-4100C.dwg',
     },
   },
   'gyerim-KSS-4000S': {
@@ -3314,7 +3314,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSS-4000S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS4000S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-4000S.dwg',
     },
   },
   'gyerim-KSS-4000C': {
@@ -3331,7 +3331,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-4000C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-4000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS4000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-4000C.dwg',
     },
   },
   'gyerim-KSS-3000C': {
@@ -3348,7 +3348,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-3000C.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-3000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS3000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-3000C.dwg',
     },
   },
   'gyerim-KSS-2700A': {
@@ -3366,8 +3366,8 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KSS-2700A.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSS-2700A.pdf',
       시공도면: 'docs/drawings/gyerim/KSS-2700A.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS2700A',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/SS2700A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-2700A.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSS-2700A.pdf',
     },
   },
   'gyerim-KSS-2500A': {
@@ -3384,7 +3384,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSS-2500A.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KSS-2500A.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SS2500A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-2500A.dwg',
     },
   },
   'gyerim-KSV-1800STD': {
@@ -3400,8 +3400,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSV-1800STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSV1800ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSV1800ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSV-1800STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSV-1800STD.pdf',
     },
   },
   'gyerim-KSO-1700STD': {
@@ -3417,8 +3417,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSO-1700STD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SO1700ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/SO1700ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSO-1700STD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSO-1700STD.pdf',
     },
   },
   'gyerim-KSM-1600CD': {
@@ -3435,8 +3435,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSM-1600CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SM1600C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/SM1600C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSM-1600CD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSM-1600CD.pdf',
     },
   },
   'gyerim-KSH-1400STP': {
@@ -3453,7 +3453,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSH-1400STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSH1400STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSH-1400STP.dwg',
     },
   },
   'gyerim-KSH-1400ST': {
@@ -3471,7 +3471,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSH-1400ST.pdf',
       시공도면: 'docs/drawings/gyerim/KSH-1400ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSH1400ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSH-1400ST.dwg',
     },
   },
   'gyerim-KSBC-200S': {
@@ -3488,8 +3488,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSBC-200S.pdf',
       시공도면: 'docs/drawings/gyerim/KSBC-200S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSBC200S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSBC200S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSBC-200S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSBC-200S.pdf',
     },
   },
   'gyerim-KSBC-200P': {
@@ -3506,8 +3506,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSBC-200P.pdf',
       시공도면: 'docs/drawings/gyerim/KSBC-200P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSBC200P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSBC200P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSBC-200P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSBC-200P.pdf',
     },
   },
   'gyerim-KSBC-200CD': {
@@ -3525,8 +3525,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSBC-200CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSBC-200CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSBC200C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSBC200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSBC-200CD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSBC-200CD.pdf',
     },
   },
   'gyerim-KSAC-100S': {
@@ -3543,8 +3543,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSAC-100S.pdf',
       시공도면: 'docs/drawings/gyerim/KSAC-100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSAC100S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSAC100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSAC-100S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSAC-100S.pdf',
     },
   },
   'gyerim-KSAC-100CD': {
@@ -3562,8 +3562,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSAC-100CD.pdf',
       시공도면: 'docs/drawings/gyerim/KSAC-100CD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSAC100C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSAC100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSAC-100CD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSAC-100CD.pdf',
     },
   },
   'gyerim-KSCC-300C': {
@@ -3580,8 +3580,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSCC-300C.pdf',
       시공도면: 'docs/drawings/gyerim/KSCC-300C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSCC300C',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSCC300C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSCC-300C.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSCC-300C.pdf',
     },
   },
   'gyerim-KSCC-300S': {
@@ -3598,8 +3598,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSCC-300S.pdf',
       시공도면: 'docs/drawings/gyerim/KSCC-300S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSCC300S',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSCC300S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSCC-300S.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSCC-300S.pdf',
     },
   },
   'gyerim-KSCC-300P': {
@@ -3616,8 +3616,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSCC-300P.pdf',
       시공도면: 'docs/drawings/gyerim/KSCC-300P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSCC300P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSCC300P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSCC-300P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSCC-300P.pdf',
     },
   },
   'gyerim-KSO-1700STPD': {
@@ -3633,8 +3633,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSO-1700STPD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSO1700STPD',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSO1700STPD',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSO-1700STPD.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSO-1700STPD.pdf',
     },
   },
   'gyerim-KSS-2800A': {
@@ -3650,8 +3650,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSS-2800A.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSS2800A',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSS2800A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-2800A.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSS-2800A.pdf',
     },
   },
   'gyerim-KSS-2900A': {
@@ -3667,8 +3667,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KSS-2900A.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KSS2900A',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KSS2900A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSS-2900A.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KSS-2900A.pdf',
     },
   },
   'gyerim-KSZ-080C': {
@@ -3685,7 +3685,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KSZ-080C.pdf',
       시공도면: 'docs/drawings/gyerim/KSZ-080C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SZ080C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KSZ-080C.dwg',
     },
   },
   'gyerim-KRS-9500W': {
@@ -3702,7 +3702,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-9500W.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-9500W.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS9500W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-9500W.dwg',
     },
   },
   'gyerim-KRS-9300': {
@@ -3719,7 +3719,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-9300.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-9300.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS9300',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-9300.dwg',
     },
   },
   'gyerim-KRS-8500W': {
@@ -3737,8 +3737,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-8500W.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-8500W.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS8500W',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KRS8500W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-8500W.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KRS-8500W.pdf',
     },
   },
   'gyerim-KRS-8300': {
@@ -3756,7 +3756,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-8300.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-8300.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS8300',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-8300.dwg',
     },
   },
   'gyerim-KRS-8000': {
@@ -3774,8 +3774,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-8000.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-8000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS8000',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KRS8000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-8000.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KRS-8000.pdf',
     },
   },
   'gyerim-KRS-7500W': {
@@ -3793,7 +3793,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-7500W.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-7500W.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-7500W.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS7500W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-7500W.dwg',
     },
   },
   'gyerim-KRS-7300B': {
@@ -3810,7 +3810,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-7300B.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-7300B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS7300B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-7300B.dwg',
     },
   },
   'gyerim-KRS-7300': {
@@ -3827,7 +3827,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-7300.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-7300.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS7300',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-7300.dwg',
     },
   },
   'gyerim-KRS-7000B': {
@@ -3845,8 +3845,8 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-7000B.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-7000B.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-7000B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS7000B',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KRS7000B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-7000B.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KRS-7000B.pdf',
     },
   },
   'gyerim-KRS-7000': {
@@ -3864,7 +3864,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-7000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-7000.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-7000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS7000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-7000.dwg',
     },
   },
   'gyerim-KRS-6500W': {
@@ -3882,7 +3882,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-6500W.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-6500W.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-6500W.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS6500W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-6500W.dwg',
     },
   },
   'gyerim-KRS-6000': {
@@ -3900,7 +3900,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-6000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-6000.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-6000.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS6000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-6000.dwg',
     },
   },
   'gyerim-KRS-4500W': {
@@ -3917,7 +3917,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-4500W.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-4500W.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS4500W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-4500W.dwg',
     },
   },
   'gyerim-KRS-4300': {
@@ -3935,8 +3935,8 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-4300.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-4300.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-4300.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS4300',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KRS4300',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-4300.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KRS-4300.pdf',
     },
   },
   'gyerim-KR-3500': {
@@ -3953,7 +3953,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KR-3500.pdf',
       시공도면: 'docs/drawings/gyerim/KR-3500.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KR3500',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KR-3500.zip',
     },
   },
   'gyerim-KR-3000': {
@@ -3970,7 +3970,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KR-3000.pdf',
       시공도면: 'docs/drawings/gyerim/KR-3000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KR3000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KR-3000.zip',
     },
   },
   'gyerim-KRS-2000B': {
@@ -3988,7 +3988,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-2000B.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-2000B.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-2000B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS2000B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-2000B.dwg',
     },
   },
   'gyerim-KRS-2000': {
@@ -4006,7 +4006,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KRS-2000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KRS-2000.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-2000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS2000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-2000.dwg',
     },
   },
   'gyerim-KR-2000': {
@@ -4023,7 +4023,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KR-2000.pdf',
       시공도면: 'docs/drawings/gyerim/KR-2000.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KR2000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KR-2000.zip',
     },
   },
   'gyerim-KRS-1500': {
@@ -4040,8 +4040,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-1500.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-1500.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS1500M',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KRS1500M',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-1500.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KRS-1500.pdf',
     },
   },
   'gyerim-KRS-1000': {
@@ -4058,7 +4058,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-1000.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-1000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS1000M',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-1000.dwg',
     },
   },
   'gyerim-KRS-8400': {
@@ -4075,8 +4075,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KRS-8400.pdf',
       시공도면: 'docs/drawings/gyerim/KRS-8400.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KRS8400',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KRS8400',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KRS-8400.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KRS-8400.pdf',
     },
   },
   'gyerim-KPS-3600P': {
@@ -4094,8 +4094,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3600P.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3600P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3600P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3600P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3600P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3600P.zip',
     },
   },
   'gyerim-KPS-3600': {
@@ -4113,8 +4113,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3600.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3600.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3600',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3600',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3600.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3600.zip',
     },
   },
   'gyerim-KPS-3500P': {
@@ -4132,8 +4132,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3500P.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3500P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3500P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3500P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3500P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3500P.zip',
     },
   },
   'gyerim-KPS-3500': {
@@ -4151,8 +4151,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3500.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3500.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3500',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3500',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3500.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3500.zip',
     },
   },
   'gyerim-KPS-3400P': {
@@ -4170,8 +4170,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3400P.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3400P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3400P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3400P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3400P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3400P.zip',
     },
   },
   'gyerim-KPS-3400': {
@@ -4189,8 +4189,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3400.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3400.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3400',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3400',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3400.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3400.zip',
     },
   },
   'gyerim-KPS-3300P': {
@@ -4208,8 +4208,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3300P.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3300P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3300P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3300P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3300P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3300P.zip',
     },
   },
   'gyerim-KPS-3300': {
@@ -4227,8 +4227,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3300.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3300.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3300',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3300',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3300.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3300.zip',
     },
   },
   'gyerim-KPS-3200P': {
@@ -4246,8 +4246,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3200P.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3200P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3200P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3200P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3200P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3200P.zip',
     },
   },
   'gyerim-KPS-3200': {
@@ -4265,8 +4265,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3200.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3200.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3200',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3200',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3200.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3200.zip',
     },
   },
   'gyerim-KPS-3000P': {
@@ -4284,8 +4284,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3000P.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3000P.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3000P',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3000P',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3000P.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3000P.zip',
     },
   },
   'gyerim-KPS-3000': {
@@ -4303,8 +4303,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-3000.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-3000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS3000',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS3000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-3000.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-3000.zip',
     },
   },
   'gyerim-KBO-1770ST': {
@@ -4320,8 +4320,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBO-1770ST.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBO1770ST',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBO1770ST',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBO-1770ST.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBO-1770ST.pdf',
     },
   },
   'gyerim-KPS-1000': {
@@ -4339,8 +4339,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-1000.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-1000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS1000',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS1000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-1000.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-1000.pdf',
     },
   },
   'gyerim-KR-5000': {
@@ -4375,8 +4375,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KPS-2000.pdf',
       시공도면: 'docs/drawings/gyerim/KPS-2000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KPS2000',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KPS2000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KPS-2000.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KPS-2000.pdf',
     },
   },
   'gyerim-KBO-1770STP': {
@@ -4392,8 +4392,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KBO-1770STP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KBO1770STP',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KBO1770STP',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KBO-1770STP.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KBO-1770STP.pdf',
     },
   },
   'gyerim-KR-5300': {
@@ -4409,8 +4409,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KR-5300.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KR5300',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/KR5300',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KR-5300.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KR-5300.pdf',
     },
   },
   'gyerim-KLA-400B': {
@@ -4427,8 +4427,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLA-400B.pdf',
       시공도면: 'docs/drawings/gyerim/KLA-400B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LA400B',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LA400B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLA-400B.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLA-400B.pdf',
     },
   },
   'gyerim-KLA-300B': {
@@ -4445,8 +4445,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLA-300B.pdf',
       시공도면: 'docs/drawings/gyerim/KLA-300B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LA300B',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LA300B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLA-300B.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLA-300B.pdf',
     },
   },
   'gyerim-KLA-300A': {
@@ -4463,8 +4463,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLA-300A.pdf',
       시공도면: 'docs/drawings/gyerim/KLA-300A.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LA300A',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LA300A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLA-300A.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLA-300A.pdf',
     },
   },
   'gyerim-KLA-200AB': {
@@ -4481,8 +4481,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLA-200AB.pdf',
       시공도면: 'docs/drawings/gyerim/KLA-200AB.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LA200XXXX',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LA200XXXX',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLA-200AB.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLA-200AB.pdf',
     },
   },
   'gyerim-KLA-400A': {
@@ -4499,8 +4499,8 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLA-400A.pdf',
       시공도면: 'docs/drawings/gyerim/KLA-400A.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/LA400A',
-      사용설명서: 'https://www.kelim.net/common/product/download/USERMANUAL/LA400A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLA-400A.dwg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KLA-400A.pdf',
     },
   },
   'gyerim-95017MS': {
@@ -4516,7 +4516,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95017MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95017',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95017MS.dwg',
     },
   },
   'gyerim-95014MS': {
@@ -4532,7 +4532,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95014MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95014A',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95014MS.dwg',
     },
   },
   'gyerim-95013MS': {
@@ -4548,7 +4548,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95013MS.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95013',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95013MS.zip',
     },
   },
   'gyerim-95012MS': {
@@ -4564,7 +4564,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95012MS.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95012',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95012MS.zip',
     },
   },
   'gyerim-95011MS': {
@@ -4580,7 +4580,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95011MS.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95011',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95011MS.zip',
     },
   },
   'gyerim-95010MS': {
@@ -4596,7 +4596,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95010MS.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95010',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95010MS.zip',
     },
   },
   'gyerim-KLC-2000': {
@@ -4613,7 +4613,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLC-2000.pdf',
       시공도면: 'docs/drawings/gyerim/KLC-2000.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLC2000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLC-2000.dwg',
     },
   },
   'gyerim-KLC-1000': {
@@ -4631,7 +4631,7 @@ const PRODUCTS = {
       시험성적서: 'docs/test-cert/gyerim/KLC-1000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KLC-1000.pdf',
       시공도면: 'docs/drawings/gyerim/KLC-1000.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLC1000',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLC-1000.dwg',
     },
   },
   'gyerim-KF-1000C': {
@@ -4647,7 +4647,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-1000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF1000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-1000C.dwg',
     },
   },
   'gyerim-KF-600': {
@@ -4663,7 +4663,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-600.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF600',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-600.dwg',
     },
   },
   'gyerim-KA-550': {
@@ -4679,7 +4679,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KA-550.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KA550',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KA-550.dwg',
     },
   },
   'gyerim-KA-500': {
@@ -4695,7 +4695,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KA-500.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KA500',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KA-500.zip',
     },
   },
   'gyerim-KF-450C': {
@@ -4711,7 +4711,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-450C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF450C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-450C.dwg',
     },
   },
   'gyerim-KF-400W': {
@@ -4727,7 +4727,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-400W.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF400W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-400W.dwg',
     },
   },
   'gyerim-KF-400C': {
@@ -4743,7 +4743,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-400C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF400C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-400C.dwg',
     },
   },
   'gyerim-KF-350': {
@@ -4759,7 +4759,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-350.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF350RC',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-350.dwg',
     },
   },
   'gyerim-G-335O': {
@@ -4775,7 +4775,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/G-335O.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G335O',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/G-335O.dwg',
     },
   },
   'gyerim-G-330O': {
@@ -4791,7 +4791,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/G-330O.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G330O',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/G-330O.dwg',
     },
   },
   'gyerim-KF-300': {
@@ -4806,7 +4806,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-300.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF300RC',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-300.zip',
     },
   },
   'gyerim-KF-210': {
@@ -4822,7 +4822,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-210.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF210C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-210.dwg',
     },
   },
   'gyerim-KF-200': {
@@ -4838,7 +4838,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-200.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF200C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-200.zip',
     },
   },
   'gyerim-KF-100': {
@@ -4854,7 +4854,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-100.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF100C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-100.zip',
     },
   },
   'gyerim-KF-30': {
@@ -4870,7 +4870,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-30.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF30RC',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-30.dwg',
     },
   },
   'gyerim-G-030O': {
@@ -4886,7 +4886,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/G-030O.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G030O',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/G-030O.zip',
     },
   },
   'gyerim-KF-20': {
@@ -4902,7 +4902,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-20.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF20C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-20.dwg',
     },
   },
   'gyerim-KF-10': {
@@ -4918,7 +4918,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KF-10.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KF10C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KF-10.dwg',
     },
   },
   'gyerim-KLC-2000C': {
@@ -4935,7 +4935,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KLC-2000C.pdf',
       시공도면: 'docs/drawings/gyerim/KLC-2000C.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/KLC2000C',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KLC-2000C.dwg',
     },
   },
   'gyerim-K108101': {
@@ -4952,7 +4952,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/K108101.pdf',
       시공도면: 'docs/drawings/gyerim/K108101.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH8101',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/K108101.dwg',
     },
   },
   'gyerim-95043MS': {
@@ -4969,7 +4969,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95043MS.pdf',
       시공도면: 'docs/drawings/gyerim/95043MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95043',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95043MS.dwg',
     },
   },
   'gyerim-95039MSS': {
@@ -4986,7 +4986,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95039MSS.pdf',
       시공도면: 'docs/drawings/gyerim/95039MSS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95039S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95039MSS.dwg',
     },
   },
   'gyerim-95039MSG': {
@@ -5003,7 +5003,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95039MSG.pdf',
       시공도면: 'docs/drawings/gyerim/95039MSG.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95039G',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95039MSG.dwg',
     },
   },
   'gyerim-95039MSB': {
@@ -5020,7 +5020,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95039MSB.pdf',
       시공도면: 'docs/drawings/gyerim/95039MSB.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95039B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95039MSB.dwg',
     },
   },
   'gyerim-95039MS': {
@@ -5037,7 +5037,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95039MS.pdf',
       시공도면: 'docs/drawings/gyerim/95039MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95039',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95039MS.dwg',
     },
   },
   'gyerim-95037MS': {
@@ -5054,7 +5054,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95037MS.pdf',
       시공도면: 'docs/drawings/gyerim/95037MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95037',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95037MS.dwg',
     },
   },
   'gyerim-95036MS': {
@@ -5071,7 +5071,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95036MS.pdf',
       시공도면: 'docs/drawings/gyerim/95036MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95036',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95036MS.dwg',
     },
   },
   'gyerim-95035MSW': {
@@ -5087,7 +5087,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95035MSW.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95035W',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95035MSW.dwg',
     },
   },
   'gyerim-95035MSG': {
@@ -5103,7 +5103,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95035MSG.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95035G',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95035MSG.dwg',
     },
   },
   'gyerim-95035MSD': {
@@ -5119,7 +5119,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95035MSD.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95035D',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95035MSD.dwg',
     },
   },
   'gyerim-95035MSB': {
@@ -5135,7 +5135,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95035MSB.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95035B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95035MSB.dwg',
     },
   },
   'gyerim-95031MS': {
@@ -5152,7 +5152,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95031MS.pdf',
       시공도면: 'docs/drawings/gyerim/95031MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95031',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95031MS.dwg',
     },
   },
   'gyerim-95020MS': {
@@ -5169,7 +5169,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95020MS.pdf',
       시공도면: 'docs/drawings/gyerim/95020MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95020',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95020MS.dwg',
     },
   },
   'gyerim-95053MS': {
@@ -5187,7 +5187,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95053MS.pdf',
       시공도면: 'docs/drawings/gyerim/95053MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95053V',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95053MS.dwg',
     },
   },
   'gyerim-95051MS': {
@@ -5205,7 +5205,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95051MS.pdf',
       시공도면: 'docs/drawings/gyerim/95051MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95051V',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95051MS.dwg',
     },
   },
   'gyerim-95050MS': {
@@ -5223,7 +5223,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95050MS.pdf',
       시공도면: 'docs/drawings/gyerim/95050MS.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95050V',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95050MS.dwg',
     },
   },
   'gyerim-95051MSP': {
@@ -5241,7 +5241,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95051MSP.pdf',
       시공도면: 'docs/drawings/gyerim/95051MSP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95051PV',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95051MSP.dwg',
     },
   },
   'gyerim-95050MSP': {
@@ -5259,7 +5259,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/95050MSP.pdf',
       시공도면: 'docs/drawings/gyerim/95050MSP.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH95050PV',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95050MSP.dwg',
     },
   },
   'gyerim-95035MSR': {
@@ -5275,7 +5275,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/95035MSR.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/G95035R',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/95035MSR.dwg',
     },
   },
   'gyerim-K109101': {
@@ -5292,7 +5292,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/K109101.pdf',
       시공도면: 'docs/drawings/gyerim/K109101.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/XH9101',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/K109101.dwg',
     },
   },
   'gyerim-KS-600S': {
@@ -5308,7 +5308,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-600S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB600S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-600S.dwg',
     },
   },
   'gyerim-KS-600G': {
@@ -5324,7 +5324,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-600G.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB600G',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-600G.dwg',
     },
   },
   'gyerim-KS-600B': {
@@ -5340,7 +5340,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-600B.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB600B',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-600B.dwg',
     },
   },
   'gyerim-KS-600': {
@@ -5356,7 +5356,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-600.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB600',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-600.dwg',
     },
   },
   'gyerim-KS-550': {
@@ -5372,7 +5372,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-550.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB550',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-550.dwg',
     },
   },
   'gyerim-KS-400': {
@@ -5388,7 +5388,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-400.jpg',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB400',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-400.zip',
     },
   },
   'gyerim-KS-150': {
@@ -5404,7 +5404,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-150.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB150',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-150.dwg',
     },
   },
   'gyerim-KS-100S': {
@@ -5420,7 +5420,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-100S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB100S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-100S.dwg',
     },
   },
   'gyerim-KS-6000S': {
@@ -5436,7 +5436,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-6000S.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB6000S',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-6000S.dwg',
     },
   },
   'gyerim-KS-700': {
@@ -5452,7 +5452,7 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시공도면: 'docs/drawings/gyerim/KS-700.pdf',
-      CAD: 'https://www.kelim.net/common/product/download/CAD/SB700',
+      CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KS-700.dwg',
     },
   },
 };
