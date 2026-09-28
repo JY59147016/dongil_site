@@ -6,7 +6,7 @@
   <title>위생도기 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260923x">
+  <link rel="stylesheet" href="css/style.css?v=20260928">
 </head>
 <body>
 
@@ -235,6 +235,37 @@
         </div>
       </div>
 
+      <!-- 세면기 종류 필터 (원본 폴더 이름 = 제품의 subcategory) -->
+      <div class="filter-group" data-filter-group="subcategory">
+        <span class="filter-group-label">세면기</span>
+        <div class="filter-check-list">
+          <div class="filter-check-item is-all">
+            <input type="checkbox" class="group-all-check" id="s-sub-all">
+            <label for="s-sub-all">전체</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-b1" value="일체형">
+            <label for="s-sub-b1">일체형</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-b2" value="페데스탈">
+            <label for="s-sub-b2">페데스탈</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-b3" value="탑카운터">
+            <label for="s-sub-b3">탑카운터</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-b4" value="언더카운터">
+            <label for="s-sub-b4">언더카운터</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-b5" value="기타">
+            <label for="s-sub-b5">기타</label>
+          </div>
+        </div>
+      </div>
+
     </div><!-- /filter-panel -->
 
     <!-- 일괄 선택 툴바 -->
@@ -312,8 +343,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260923x"></script>
-<script src="js/main.js?v=20260923x"></script>
+<script src="js/products-data.js?v=20260928"></script>
+<script src="js/main.js?v=20260928"></script>
 <script>
 /* ── 위생도기 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
@@ -332,6 +363,7 @@
     card.id          = id;
     card.dataset.brand    = p.brand;
     card.dataset.category = p.category;
+    card.dataset.subcategory = p.subcategory || '';
     card.innerHTML = `
       <div class="product-img">
         <img src="${p.image || 'images/products/no-image.svg'}" alt="${p.name}" loading="lazy"
