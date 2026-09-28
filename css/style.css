@@ -2359,3 +2359,10 @@ ul { list-style: none; }
 .pd-search-results li:hover,
 .pd-search-results li.active { background: #f1ebe3; }
 .pd-search-results li b { color: #5b4f41; }
+
+/* 상세페이지 — 시공도면 (제품 상세 스펙 표 아래) */
+.pd-drawing .pd-spec-title { margin-top: 48px; }
+.pd-drawing-pages { display: flex; flex-direction: column; gap: 16px; max-width: 960px; margin: 16px auto 0; }
+.pd-drawing-img { display: block; width: 100%; height: auto; border: 1px solid #e5e0d8; background: #fff; }
+.pd-drawing-link { display: inline-block; margin: 8px auto 0; padding: 10px 20px; border: 1px solid #ddd2c4; background: #f1ebe3; color: #5b4f41; font-size: 0.9rem; text-decoration: none; }
+.pd-drawing-pages:has(.pd-drawing-link) { align-items: center; }

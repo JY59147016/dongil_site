@@ -4177,7 +4177,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KR-3500.pdf',
-      시공도면: 'docs/drawings/gyerim/KR-3500.pdf',
+      시공도면: 'docs/drawings/gyerim/KR-3500.jpg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KR-3500.pdf',
       CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KR-3500.zip',
     },
   },
@@ -4195,7 +4196,8 @@ const PRODUCTS = {
     desc: '',
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KR-3000.pdf',
-      시공도면: 'docs/drawings/gyerim/KR-3000.pdf',
+      시공도면: 'docs/drawings/gyerim/KR-3000.jpg',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KR-3000.pdf',
       CAD: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/cad/gyerim/KR-3000.zip',
     },
   },
@@ -4604,7 +4606,7 @@ const PRODUCTS = {
     docs: {
       시험성적서: 'docs/test-cert/gyerim/KR-5000.pdf',
       환경표지인증서: 'docs/env-cert/gyerim/KR-5000.pdf',
-      시공도면: 'docs/drawings/gyerim/KR-5000.pdf',
+      사용설명서: 'https://raw.githubusercontent.com/JY59147016/dongil_docs/main/manual/gyerim/KR-5000.pdf',
     },
   },
   'gyerim-KPS-2000': {

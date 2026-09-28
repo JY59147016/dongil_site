@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260928">
+  <link rel="stylesheet" href="css/style.css?v=20260928b">
 </head>
 <body>
 
@@ -205,6 +205,13 @@
 
     <!-- 제품 상세 스펙 표 (specTable 이 있으면 이미지 대신 표로) -->
     <div id="pd-spec-table" class="pd-spec-table" style="display:none;"></div>
+
+    <!-- 시공도면 (docs.시공도면 — jpg/png 는 그대로, pdf 는 페이지를 그림으로 그려서 표시) -->
+    <div id="pd-drawing" class="pd-drawing" style="display:none;">
+      <hr class="pd-divider">   <!-- 제품 상세 스펙과 시공도면 사이 구분선 (위쪽 구분선과 같은 모양) -->
+      <h2 class="pd-spec-title">시공도면</h2>
+      <div id="pd-drawing-pages" class="pd-drawing-pages"></div>
+    </div>
   </div>
 </section>
 
@@ -233,8 +240,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260928"></script>
-<script src="js/main.js?v=20260928"></script>
+<script src="js/products-data.js?v=20260928b"></script>
+<script src="js/main.js?v=20260928b"></script>
 <script>
 /* 경로 표시줄 오른쪽 — 제품 바로 검색 */
 (function initProductSearch() {
@@ -481,6 +488,47 @@
     document.getElementById('pd-spec-image').src = p.specImage;
     document.getElementById('pd-spec-image-wrap').style.display = '';
   }
+
+  /* 시공도면 — 스펙 표 아래에 바로 보이도록. pdf 는 pdf.js 로 페이지를 그림으로 그림 (화면 가까이 왔을 때 불러옴) */
+  (function renderDrawing() {
+    const url = p.docs && p.docs['시공도면'];
+    if (!url || url === '#') return;
+    const wrap  = document.getElementById('pd-drawing');
+    const pages = document.getElementById('pd-drawing-pages');
+    const ext = url.split('?')[0].split('.').pop().toLowerCase();
+    const fail = () => { pages.innerHTML = '<a class="pd-drawing-link" href="' + url + '" target="_blank" rel="noopener">시공도면 열기</a>'; };
+    wrap.style.display = '';
+    if (ext !== 'pdf') {
+      pages.innerHTML = '<img class="pd-drawing-img" src="' + url + '" alt="' + escHtml(p.model) + ' 시공도면" loading="lazy">';
+      return;
+    }
+    const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+    async function draw() {
+      try {
+        if (!window.pdfjsLib) {
+          await new Promise((ok, no) => { const s = document.createElement('script'); s.src = PDFJS + 'pdf.min.js'; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
+          pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS + 'pdf.worker.min.js';
+        }
+        const pdf = await pdfjsLib.getDocument(url).promise;
+        const n = Math.min(pdf.numPages, 5);
+        for (let i = 1; i <= n; i++) {
+          const page = await pdf.getPage(i);
+          const base = page.getViewport({ scale: 1 });
+          const scale = (pages.clientWidth || 960) / base.width * Math.min(window.devicePixelRatio || 1, 2);
+          const vp = page.getViewport({ scale });
+          const canvas = document.createElement('canvas');
+          canvas.className = 'pd-drawing-img';
+          canvas.width = vp.width; canvas.height = vp.height;
+          pages.appendChild(canvas);
+          await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+        }
+      } catch (e) { fail(); }
+    }
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); draw(); } }, { rootMargin: '600px' });
+      io.observe(wrap);
+    } else draw();
+  })();
 
   /* 규격 테이블 (텍스트 스펙이 있는 경우에만) */
   const table = document.getElementById('pd-specs');
