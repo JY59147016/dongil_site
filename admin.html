@@ -363,13 +363,14 @@
                 <option value="">선택</option>
                 <optgroup label="위생도기">
                   <option>양변기</option><option>세면기</option>
-                  <option>소변기</option><option>기타</option>
+                  <option>소변기</option><option>비데</option><option>부속품</option><option>기타</option>
                 </optgroup>
                 <optgroup label="수전금구">
                   <option>세면수전</option><option>샤워수전</option>
                   <option>주방수전</option><option>레인샤워</option>
                   <option>센서수전</option><option>유아·다용도수전</option>
                   <option>샤워헤드</option><option>슬라이드바</option>
+                  <option>악세서리</option>
                 </optgroup>
                 <optgroup label="타일">
                   <option>타일</option>
@@ -604,9 +605,9 @@ async function makeHash(pw) {
   console.log('%c해시: ' + h, 'font-weight:bold');
   return h;
 }
-const SANITARY_CATS = ['양변기','세면기','소변기','기타'];
+const SANITARY_CATS = ['양변기','세면기','소변기','비데','부속품','기타'];
 // 수전금구 카테고리 — products-faucet.html, product.html 의 목록과 같게 유지
-const FAUCET_CATS   = ['세면수전','샤워수전','주방수전','레인샤워','센서수전','유아·다용도수전','샤워헤드','슬라이드바'];
+const FAUCET_CATS   = ['세면수전','샤워수전','주방수전','레인샤워','센서수전','유아·다용도수전','샤워헤드','슬라이드바','악세서리'];
 
 let TOKEN  = '';
 let BRANCH = 'main';
@@ -699,7 +700,7 @@ function productsToJs(products) {
     return q(v);
   };
   // 보기 좋은 순서로 먼저 쓰고, 그 밖의 항목은 뒤에 그대로
-  const ORDER = ['brand','category','subcategory','model','name','image','images','specImage','specTable','certLogos','specs','tags','desc','docs'];
+  const ORDER = ['brand','category','subcategory','model','name','image','images','specImage','specTable','notice','certLogos','specs','tags','desc','docs'];
 
   let out = `/* ============================================================
    products-data.js — 전체 제품 데이터
@@ -1024,9 +1025,18 @@ function fillSpecForm(specTable) {
         grid.insertAdjacentHTML('beforeend', `<div class="fld"><label>${k}</label><input type="text" data-group="${group}" data-key="${k}"></div>`);
         inp = grid.querySelector(`input[data-key="${k}"]`);
       }
-      inp.value = v;
+      if (Array.isArray(v)) {
+        // 작은 항목 목록(비데 세정 기능 등) → "이름: 값 / 이름: 값" 으로 보여 주고, 저장할 때 다시 목록으로
+        inp.value = v.map(([a, b]) => a + ': ' + b).join(' / ');
+        inp.dataset.list = '1';
+      } else {
+        inp.value = v;
+      }
     });
   });
+}
+function parseSpecList(s) {
+  return s.split(' / ').map(x => { const j = x.indexOf(':'); return j < 0 ? [x.trim(), '-'] : [x.slice(0, j).trim(), x.slice(j + 1).trim() || '-']; }).filter(([a]) => a);
 }
 
 // 양식 → specTable (빈 칸은 빼고, 기본정보 앞에 품번·제품명)
@@ -1034,7 +1044,8 @@ function getSpecTable(model, name) {
   const table = {};
   document.querySelectorAll('#specForm .spec-group').forEach(g => {
     const group = g.querySelector('.spec-group-title').textContent;
-    const pairs = [...g.querySelectorAll('input[data-key]')].map(i => [i.dataset.key, i.value.trim()]).filter(([, v]) => v);
+    const pairs = [...g.querySelectorAll('input[data-key]')].map(i => [i.dataset.key, i.value.trim()]).filter(([, v]) => v)
+      .map(([k, v]) => [k, g.querySelector(`input[data-key="${k}"]`).dataset.list ? parseSpecList(v) : v]);
     if (group === '기본정보') {
       const [roModel, roName] = g.querySelectorAll('input:disabled');   // 수정할 때 기존 값이 있으면 그 값, 새 제품이면 모델번호·제품명
       pairs.unshift(['품번', roModel?.dataset.keep ? roModel.value : model], ['제품명', roName?.dataset.keep ? roName.value : name]);

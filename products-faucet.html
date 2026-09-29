@@ -6,7 +6,7 @@
   <title>수전금구 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260928b">
+  <link rel="stylesheet" href="css/style.css?v=20260929">
 </head>
 <body>
 
@@ -29,9 +29,11 @@
           <a href="products-sanitary.html">위생도기</a>
           <div class="nav-dropdown">
             <a href="products-sanitary.html">전체보기</a>
-            <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=세면기">세면기</a>
+            <a href="products-sanitary.html?cat=비데">비데</a>
+            <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=소변기">소변기</a>
+            <a href="products-sanitary.html?cat=부속품">부속품</a>
           </div>
         </li>
         <li class="nav-item has-dropdown">
@@ -46,6 +48,7 @@
             <a href="products-faucet.html?cat=유아·다용도수전">유아·다용도수전</a>
             <a href="products-faucet.html?cat=샤워헤드">샤워헤드</a>
             <a href="products-faucet.html?cat=슬라이드바">슬라이드바</a>
+            <a href="products-faucet.html?cat=악세서리">악세서리</a>
           </div>
         </li>
         <li class="nav-item">
@@ -72,9 +75,11 @@
     <button class="mob-toggle">위생도기 <span class="mob-arrow">▾</span></button>
     <div class="mob-sub">
       <a href="products-sanitary.html">전체보기</a>
-      <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=세면기">세면기</a>
+      <a href="products-sanitary.html?cat=비데">비데</a>
+      <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=소변기">소변기</a>
+      <a href="products-sanitary.html?cat=부속품">부속품</a>
     </div>
   </div>
   <div class="mob-item">
@@ -89,6 +94,7 @@
       <a href="products-faucet.html?cat=유아·다용도수전">유아·다용도수전</a>
       <a href="products-faucet.html?cat=샤워헤드">샤워헤드</a>
       <a href="products-faucet.html?cat=슬라이드바">슬라이드바</a>
+      <a href="products-faucet.html?cat=악세서리">악세서리</a>
     </div>
   </div>
   <div class="mob-item">
@@ -177,16 +183,16 @@
             <label for="s-brand-all">전체</label>
           </div>
           <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-brand-daelimtong" value="대림통상">
-            <label for="s-brand-daelimtong">대림통상</label>
-          </div>
-          <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-gyerim" value="계림바스">
             <label for="s-brand-gyerim">계림바스</label>
           </div>
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-daelimbath" value="대림바스">
             <label for="s-brand-daelimbath">대림바스</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-brand-daelimtong" value="대림통상">
+            <label for="s-brand-daelimtong">대림통상</label>
           </div>
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-royal" value="로얄앤컴퍼니">
@@ -200,16 +206,40 @@
             <input type="checkbox" class="item-check" id="s-brand-inus" value="이누스">
             <label for="s-brand-inus">이누스</label>
           </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-brand-krins" value="크린스">
-            <label for="s-brand-krins">크린스</label>
-          </div>
         </div>
       </div>
 
       <!-- 제품 종류 필터 -->
-      <div class="filter-group" data-filter-group="category">
+      <!-- 큰 분류: 수전(아래 줄에서 세부 선택) · 샤워헤드 · 슬라이드바 · 악세서리 — 카드의 data-type 과 비교 -->
+      <div class="filter-group" data-filter-group="type">
         <span class="filter-group-label">수전금구</span>
+        <div class="filter-check-list">
+          <div class="filter-check-item is-all">
+            <input type="checkbox" class="group-all-check" id="s-type-all">
+            <label for="s-type-all">전체</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-type-faucet" value="수전">
+            <label for="s-type-faucet">수전</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-f7" value="샤워헤드">
+            <label for="s-cat-f7">샤워헤드</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-f8" value="슬라이드바">
+            <label for="s-cat-f8">슬라이드바</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-f9" value="악세서리">
+            <label for="s-cat-f9">악세서리</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 수전 세부 분류 — 위에서 "수전"을 골랐을 때만 보임 (카드의 data-category 와 비교) -->
+      <div class="filter-group" data-filter-group="category" id="faucetSubFilter" style="display:none;">
+        <span class="filter-group-label">수전</span>
         <div class="filter-check-list">
           <div class="filter-check-item is-all">
             <input type="checkbox" class="group-all-check" id="s-cat-all">
@@ -238,14 +268,6 @@
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-cat-f6" value="유아·다용도수전">
             <label for="s-cat-f6">유아·다용도수전</label>
-          </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-f7" value="샤워헤드">
-            <label for="s-cat-f7">샤워헤드</label>
-          </div>
-          <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-f8" value="슬라이드바">
-            <label for="s-cat-f8">슬라이드바</label>
           </div>
         </div>
       </div>
@@ -326,12 +348,13 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260928b"></script>
-<script src="js/main.js?v=20260928b"></script>
+<script src="js/products-data.js?v=20260929"></script>
+<script src="js/main.js?v=20260929"></script>
 <script>
 /* ── 수전금구 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
-  const SANITARY_CATS = ['세면수전','샤워수전','주방수전','레인샤워','센서수전','유아·다용도수전','샤워헤드','슬라이드바'];   // 이 페이지에 표시할 수전금구 카테고리
+  const SANITARY_CATS = ['세면수전','샤워수전','주방수전','레인샤워','센서수전','유아·다용도수전','샤워헤드','슬라이드바','악세서리'];   // 이 페이지에 표시할 수전금구 카테고리
+  const FAUCET_TYPE_CATS = ['세면수전','샤워수전','주방수전','레인샤워','센서수전','유아·다용도수전'];   // 큰 분류 "수전"에 묶이는 세부 분류
   const grid = document.getElementById('product-grid');
   if (!grid || typeof PRODUCTS === 'undefined') return;
 
@@ -346,6 +369,7 @@
     card.id          = id;
     card.dataset.brand    = p.brand;
     card.dataset.category = p.category;
+    card.dataset.type = FAUCET_TYPE_CATS.includes(p.category) ? '수전' : p.category;   // 큰 분류 필터용
     card.innerHTML = `
       <div class="product-img">
         <img src="${p.image || 'images/products/no-image.svg'}" alt="${p.name}" loading="lazy"
@@ -365,29 +389,45 @@
 })();
 </script>
 <script>
-/* 네비 카테고리 링크 → 해당 필터 자동 선택 */
+/* "수전" 세부 분류 줄은 큰 분류에서 "수전"을 골랐을 때만 보이기 — 숨길 때는 고른 세부 분류도 해제 */
+(function () {
+  const faucet   = document.getElementById('s-type-faucet');
+  const row      = document.getElementById('faucetSubFilter');
+  const typeGrp  = document.querySelector('.filter-group[data-filter-group="type"]');
+  function sync() {
+    const show = faucet.checked;
+    if (!show && row.querySelector('.item-check:checked')) {
+      row.querySelectorAll('.item-check').forEach(cb => { cb.checked = false; });
+      if (window.applyProductFilter) window.applyProductFilter();
+    }
+    row.style.display = show ? '' : 'none';
+    typeGrp.style.borderBottom = show ? '' : 'none';   // 아래 줄이 숨겨지면 구분선도 숨김
+  }
+  typeGrp.querySelectorAll('input').forEach(cb => cb.addEventListener('change', sync));
+  window.syncFaucetSubFilter = sync;
+  sync();
+})();
+
+/* 네비 카테고리 링크(?cat=) → 해당 필터 자동 선택
+   세면수전 등 수전 세부 분류면 "수전" + 세부 분류를, 샤워헤드·슬라이드바·악세서리면 큰 분류를 선택 */
 (function() {
   const cat = new URLSearchParams(window.location.search).get('cat');
   if (!cat) return;
-
-  const group = document.querySelector('.filter-group[data-filter-group="category"]');
-  if (!group) return;
-
-  const targets = [cat];
-
-  let checked = false;
-  targets.forEach(val => {
-    const cb = group.querySelector('.item-check[value="' + val + '"]');
-    if (cb) { cb.checked = true; checked = true; }
-  });
-
-  if (checked) {
-    /* 전체 체크 해제 */
-    const allCb = group.querySelector('.group-all-check');
+  const typeGrp = document.querySelector('.filter-group[data-filter-group="type"]');
+  const subGrp  = document.querySelector('.filter-group[data-filter-group="category"]');
+  const pick = (grp, val) => {
+    const cb = grp.querySelector('.item-check[value="' + val + '"]');
+    if (!cb) return false;
+    cb.checked = true;
+    const allCb = grp.querySelector('.group-all-check');
     if (allCb) allCb.checked = false;
-    /* 필터 재실행 (change 이벤트 트리거) */
-    group.querySelector('.item-check:checked').dispatchEvent(new Event('change'));
-  }
+    return true;
+  };
+  const sub = subGrp.querySelector('.item-check[value="' + cat + '"]');
+  const ok = sub ? (pick(typeGrp, '수전') && pick(subGrp, cat)) : pick(typeGrp, cat);
+  if (!ok) return;
+  window.syncFaucetSubFilter();
+  if (window.applyProductFilter) window.applyProductFilter();
 })();
 </script>
 

@@ -6,7 +6,7 @@
   <title>위생도기 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260928b">
+  <link rel="stylesheet" href="css/style.css?v=20260929">
 </head>
 <body>
 
@@ -29,9 +29,11 @@
           <a href="products-sanitary.html" class="active">위생도기</a>
           <div class="nav-dropdown">
             <a href="products-sanitary.html">전체보기</a>
-            <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=세면기">세면기</a>
+            <a href="products-sanitary.html?cat=비데">비데</a>
+            <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=소변기">소변기</a>
+            <a href="products-sanitary.html?cat=부속품">부속품</a>
           </div>
         </li>
         <li class="nav-item has-dropdown">
@@ -46,6 +48,7 @@
             <a href="products-faucet.html?cat=유아·다용도수전">유아·다용도수전</a>
             <a href="products-faucet.html?cat=샤워헤드">샤워헤드</a>
             <a href="products-faucet.html?cat=슬라이드바">슬라이드바</a>
+            <a href="products-faucet.html?cat=악세서리">악세서리</a>
           </div>
         </li>
         <li class="nav-item">
@@ -72,9 +75,11 @@
     <button class="mob-toggle">위생도기 <span class="mob-arrow">▾</span></button>
     <div class="mob-sub">
       <a href="products-sanitary.html">전체보기</a>
-      <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=세면기">세면기</a>
+      <a href="products-sanitary.html?cat=비데">비데</a>
+      <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=소변기">소변기</a>
+      <a href="products-sanitary.html?cat=부속품">부속품</a>
     </div>
   </div>
   <div class="mob-item">
@@ -89,6 +94,7 @@
       <a href="products-faucet.html?cat=유아·다용도수전">유아·다용도수전</a>
       <a href="products-faucet.html?cat=샤워헤드">샤워헤드</a>
       <a href="products-faucet.html?cat=슬라이드바">슬라이드바</a>
+      <a href="products-faucet.html?cat=악세서리">악세서리</a>
     </div>
   </div>
   <div class="mob-item">
@@ -178,16 +184,16 @@
             <label for="s-brand-all">전체</label>
           </div>
           <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-brand-daelimtong" value="대림통상">
-            <label for="s-brand-daelimtong">대림통상</label>
-          </div>
-          <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-gyerim" value="계림바스">
             <label for="s-brand-gyerim">계림바스</label>
           </div>
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-daelimbath" value="대림바스">
             <label for="s-brand-daelimbath">대림바스</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-brand-daelimtong" value="대림통상">
+            <label for="s-brand-daelimtong">대림통상</label>
           </div>
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-brand-royal" value="로얄앤컴퍼니">
@@ -217,16 +223,24 @@
             <label for="s-cat-all">전체</label>
           </div>
           <div class="filter-check-item">
-            <input type="checkbox" class="item-check" id="s-cat-toilet" value="양변기">
-            <label for="s-cat-toilet">양변기</label>
-          </div>
-          <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-cat-basin" value="세면기">
             <label for="s-cat-basin">세면기</label>
           </div>
           <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-bidet" value="비데">
+            <label for="s-cat-bidet">비데</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-toilet" value="양변기">
+            <label for="s-cat-toilet">양변기</label>
+          </div>
+          <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-cat-urinal" value="소변기">
             <label for="s-cat-urinal">소변기</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-parts" value="부속품">
+            <label for="s-cat-parts">부속품</label>
           </div>
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-cat-etc" value="기타">
@@ -235,8 +249,8 @@
         </div>
       </div>
 
-      <!-- 세면기 종류 필터 (원본 폴더 이름 = 제품의 subcategory) -->
-      <div class="filter-group" data-filter-group="subcategory">
+      <!-- 세면기 종류 필터 (원본 폴더 이름 = 제품의 subcategory) — 위생도기에서 "세면기"를 골랐을 때만 보임 -->
+      <div class="filter-group" data-filter-group="subcategory" id="basinSubFilter" style="display:none;">
         <span class="filter-group-label">세면기</span>
         <div class="filter-check-list">
           <div class="filter-check-item is-all">
@@ -262,6 +276,44 @@
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-sub-b5" value="기타">
             <label for="s-sub-b5">기타</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 비데 종류 필터 (원본 폴더 이름 = 제품의 subcategory) — 위생도기에서 "비데"를 골랐을 때만 보임 -->
+      <div class="filter-group" data-filter-group="subcategory" id="bidetSubFilter" style="display:none;">
+        <span class="filter-group-label">비데</span>
+        <div class="filter-check-list">
+          <div class="filter-check-item is-all">
+            <input type="checkbox" class="group-all-check" id="s-sub-d-all">
+            <label for="s-sub-d-all">전체</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-d1" value="일체형">
+            <label for="s-sub-d1">일체형</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-d2" value="착탈형">
+            <label for="s-sub-d2">착탈형</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-d3" value="시트">
+            <label for="s-sub-d3">시트</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 부속품 종류 필터 (제품의 subcategory) — 위생도기에서 "부속품"을 골랐을 때만 보임 -->
+      <div class="filter-group" data-filter-group="subcategory" id="partsSubFilter" style="display:none;">
+        <span class="filter-group-label">부속품</span>
+        <div class="filter-check-list">
+          <div class="filter-check-item is-all">
+            <input type="checkbox" class="group-all-check" id="s-sub-p-all">
+            <label for="s-sub-p-all">전체</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-p1" value="세면기용">
+            <label for="s-sub-p1">세면기용</label>
           </div>
         </div>
       </div>
@@ -343,12 +395,12 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260928b"></script>
-<script src="js/main.js?v=20260928b"></script>
+<script src="js/products-data.js?v=20260929"></script>
+<script src="js/main.js?v=20260929"></script>
 <script>
 /* ── 위생도기 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
-  const SANITARY_CATS = ['양변기','세면기','소변기','기타'];
+  const SANITARY_CATS = ['양변기','세면기','소변기','비데','부속품','기타'];
   const grid = document.getElementById('product-grid');
   if (!grid || typeof PRODUCTS === 'undefined') return;
 
@@ -383,6 +435,30 @@
 })();
 </script>
 <script>
+/* 세부 분류 줄(세면기 종류·부속품 종류)은 위생도기 필터에서 해당 분류를 골랐을 때만 보이기 — 숨길 때는 고른 종류도 해제 */
+(function () {
+  const PAIRS = [['s-cat-basin', 'basinSubFilter'], ['s-cat-bidet', 'bidetSubFilter'], ['s-cat-parts', 'partsSubFilter']];   // [위생도기 체크박스, 세부 분류 줄]
+  function sync() {
+    let changed = false;
+    PAIRS.forEach(([cbId, rowId]) => {
+      const cb = document.getElementById(cbId), row = document.getElementById(rowId);
+      if (!cb || !row) return;
+      if (!cb.checked && row.querySelector('.item-check:checked')) {
+        row.querySelectorAll('.item-check').forEach(c => { c.checked = false; });
+        changed = true;
+      }
+      row.style.display = cb.checked ? '' : 'none';
+    });
+    if (changed && window.applyProductFilter) window.applyProductFilter();
+    // 보이는 줄 중 마지막 줄은 아래 구분선 숨김
+    const shown = [...document.querySelectorAll('.filter-panel .filter-group')].filter(g => g.style.display !== 'none');
+    shown.forEach((g, i) => { g.style.borderBottom = i === shown.length - 1 ? 'none' : ''; });
+  }
+  // 메뉴 링크(?cat=세면기)가 보내는 change 이벤트는 위로 전달되지 않으므로 체크박스마다 연결
+  document.querySelectorAll('.filter-group[data-filter-group="category"] input').forEach(cb => cb.addEventListener('change', sync));
+  sync();
+})();
+
 /* 네비 카테고리 링크 → 해당 필터 자동 선택 */
 (function() {
   const cat = new URLSearchParams(window.location.search).get('cat');

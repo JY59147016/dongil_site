@@ -2366,3 +2366,21 @@ ul { list-style: none; }
 .pd-drawing-img { display: block; width: 100%; height: auto; border: 1px solid #e5e0d8; background: #fff; }
 .pd-drawing-link { display: inline-block; margin: 8px auto 0; padding: 10px 20px; border: 1px solid #ddd2c4; background: #f1ebe3; color: #5b4f41; font-size: 0.9rem; text-decoration: none; }
 .pd-drawing-pages:has(.pd-drawing-link) { align-items: center; }
+
+/* 상세페이지 — 비데·양변기·소변기: 요약 표 자리에 "제품 고시 정보" (한 줄에 두 항목) */
+.pd-basic-table.pd-notice-table { table-layout: auto; }
+.pd-basic-table.pd-notice-table th,
+.pd-basic-table.pd-notice-table td { padding: 4px 8px; font-size: 0.75rem; line-height: 1.3; }
+.pd-basic-table.pd-notice-table th,
+.pd-basic-table.pd-notice-table td { white-space: nowrap; }
+.pd-basic-table.pd-notice-table th { width: auto; }
+@media (max-width: 600px) { .pd-basic-table.pd-notice-table th, .pd-basic-table.pd-notice-table td { white-space: normal; } }
+.pd-notice-caption { caption-side: top; text-align: left; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); padding: 0 0 4px; }
+
+/* 제품 상세 스펙 — 작은 항목 목록(비데의 세정 기능 등): 한 줄에 6칸 */
+.pd-spec-sub { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px 12px; }
+.pd-spec-sub dl { margin: 0; }
+.pd-spec-sub dt { font-weight: 600; color: var(--color-primary); font-size: 0.84rem; }
+.pd-spec-sub dd { margin: 4px 0 0; color: var(--color-text-mute); font-size: 0.8rem; }
+@media (max-width: 900px) { .pd-spec-sub { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .pd-spec-sub { grid-template-columns: repeat(2, 1fr); } }
