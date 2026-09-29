@@ -651,6 +651,25 @@ function fileToBase64(file) {
   });
 }
 
+/* 제품 사진 → JPG(품질 85) base64 — PNG 로 올려도 용량을 줄이려고 JPG 로 바꿔서 저장 (투명한 부분은 카드 배경색 #F5F5F5) */
+function imageToJpegBase64(file) {
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement('canvas');
+      c.width = img.naturalWidth; c.height = img.naturalHeight;
+      const g = c.getContext('2d');
+      g.fillStyle = '#F5F5F5'; g.fillRect(0, 0, c.width, c.height);
+      g.drawImage(img, 0, 0);
+      URL.revokeObjectURL(url);
+      res(c.toDataURL('image/jpeg', 0.85).split(',')[1]);
+    };
+    img.onerror = e => { URL.revokeObjectURL(url); rej(e); };
+    img.src = url;
+  });
+}
+
 /* SHA 가져오기 (파일 없으면 null) */
 async function getSha(path) {
   try { return (await ghGet(path)).sha; }
@@ -1161,9 +1180,9 @@ document.getElementById('btnSave').addEventListener('click', async () => {
     if (window.imgFile) {
       log('이미지 업로드 중...');
       const brandFolder = getBrandFolder(brand);
-      const ext  = window.imgFile.name.split('.').pop();
-      const path = `images/products/${brandFolder}/${model.replace(/ /g,'-')}.${ext}`;
-      const b64  = await fileToBase64(window.imgFile);
+      // 사진은 항상 JPG 로 저장 (파일 이름은 모델명에서 "/" 빼고 — 사이트 전체 규칙과 같게)
+      const path = `images/products/${brandFolder}/${model.replace(/\//g,'').replace(/ /g,'-')}.jpg`;
+      const b64  = await imageToJpegBase64(window.imgFile);
       const sha  = await getSha(path);
       await ghPut(path, b64, `이미지 추가: ${model}`, sha);
       imagePath = path;
