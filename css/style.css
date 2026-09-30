@@ -2397,3 +2397,26 @@ ul { list-style: none; }
 /* Heritage de Bath 제목·원 안 글씨: 배경(#F1EBE3)과 어울리는 브라운 */
 .heritage-title,
 .heritage-badge-en { color: #4a3a2b; }
+
+/* 목록 페이지 제목(홈 / 위생도기 …) — 계림 사이트처럼 가로 전체 사진 + 가운데 흰 제목 (2026-09-30)
+   사진: images/heritage_bg.jpg(가로로 긴 욕실 사진)을 페이지마다 다른 부분을 확대해서 보여 줌. 따뜻한 갈색 막으로 글씨가 잘 보이게 */
+.page-banner {
+  padding: 40px 0; text-align: center; background-color: #6b5846;
+  min-height: max(220px, 16.667vw); display: flex; align-items: center;   /* 높이 = 화면 폭 × 320/1920 → 사진(1920x320)이 잘리지 않고 제품 전체가 보임 */
+  background-image: linear-gradient(rgba(58,44,30,.42), rgba(58,44,30,.42)), url('../images/heritage_bg.jpg');
+  background-repeat: no-repeat; background-size: cover, cover; background-position: center, center;
+}
+/* 분류별 가로 사진 (images/banners/*_wide.jpg 1920x320 — 제품 연출 사진을 가운데 두고 양옆을 흐리게 이어 만든 것, scratchpad/widebanner.ps1) */
+.page-banner-sanitary { background-image: linear-gradient(rgba(58,44,30,.42), rgba(58,44,30,.42)), url('../images/banners/sanitary_wide.jpg'); background-position: center, center; }
+.page-banner-faucet   { background-image: linear-gradient(rgba(58,44,30,.42), rgba(58,44,30,.42)), url('../images/banners/faucet_wide.jpg'); background-position: center, center; }
+.page-banner-tile     { background-image: linear-gradient(rgba(58,44,30,.42), rgba(58,44,30,.42)), url('../images/banners/tile_wide.jpg'); background-position: center, center; }
+.page-banner p, .page-banner h1 { color: #fff !important; text-shadow: 0 1px 6px rgba(0,0,0,.25); }
+.page-banner p:first-child { opacity: .85; }
+.page-banner > .container { width: 100%; }
+@media (max-width: 768px) { .page-banner { padding: 40px 0; } .page-banner-sanitary, .page-banner-tile { background-position: center, 66% center; } }   /* 좁은 화면: 제품 쪽이 보이게 */
+
+/* 수전금구 제목: 글자는 왼쪽, 글자 뒤로 흰색 그라데이션 (사진은 갈색 막 없이 그대로) — 2026-09-30 */
+.page-banner-faucet { text-align: left; background-image: linear-gradient(90deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.7) 22%, rgba(255,255,255,0) 48%), url('../images/banners/faucet_wide.jpg'); }
+.page-banner-faucet p, .page-banner-faucet h1 { color: #4a3a2b !important; text-shadow: none; }
+.page-banner-faucet p { color: #5b4f41 !important; }
+@media (max-width: 768px) { .page-banner-faucet { background-image: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.72) 45%, rgba(255,255,255,.15) 85%), url('../images/banners/faucet_wide.jpg'); } }
