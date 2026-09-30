@@ -2384,3 +2384,13 @@ ul { list-style: none; }
 .pd-spec-sub dd { margin: 4px 0 0; color: var(--color-text-mute); font-size: 0.8rem; }
 @media (max-width: 900px) { .pd-spec-sub { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 600px) { .pd-spec-sub { grid-template-columns: repeat(2, 1fr); } }
+
+/* 메인 — Heritage de Bath 소개 섹션: 욕실 사진(images/heritage_bg.jpg) 위에 #F1EBE3 반투명 막 (2026-09-30)
+   글자는 어두운 색으로 바꿔 읽히게. 예전 사진 배경으로 되돌리려면 이 블록을 지우면 됨 */
+.heritage-section { background: linear-gradient(rgba(241,235,227,0.55), rgba(241,235,227,0.55)), url('../images/heritage_bg.jpg') center center/cover no-repeat, #F1EBE3; color: var(--color-primary); }
+.heritage-tag { color: var(--color-accent); }
+.heritage-title { color: var(--color-primary); }
+.heritage-desc { color: #5b4f41; }
+.heritage-btn:hover { background: var(--color-primary); color: var(--color-white); }
+.heritage-badge-en { color: var(--color-primary); }
+.heritage-badge-sub { color: var(--color-accent); }
