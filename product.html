@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260929b">
+  <link rel="stylesheet" href="css/style.css?v=20260930">
 </head>
 <body>
 
@@ -246,8 +246,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20260929b"></script>
-<script src="js/main.js?v=20260929b"></script>
+<script src="js/products-data.js?v=20260930"></script>
+<script src="js/main.js?v=20260930"></script>
 <script>
 /* 경로 표시줄 오른쪽 — 제품 바로 검색 */
 (function initProductSearch() {
@@ -498,7 +498,9 @@
   ['슬라이드바', '악세서리'].forEach(c => {
     SUMMARY[c] = () => [['색상', clean(specVal('색상'))], ['재질', clean(specVal('재질'))], ['사이즈', clean(specVal('사이즈'))]];
   });
-  const NOTICE_CATS = ['양변기', '소변기'];
+  // 양변기: 절수등급 / 배수타입 / 사이즈 (계림 양변기에는 "제품 고시 정보"가 없어서 스펙 표에서)
+  SUMMARY['양변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], ['배수타입', clean(specVal('배수타입'))], ['사이즈', clean(specVal('사이즈'))]];
+  const NOTICE_CATS = ['소변기'];
   const notice = NOTICE_CATS.includes(p.category) ? (p.notice || []).filter(([k]) => !/^품번\s*\/\s*제품명$/.test(k)) : [];
   if (notice.length) {
     const cellV = v => (v && v !== '-') ? escHtml(v) : '&nbsp;';
