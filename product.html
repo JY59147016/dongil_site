@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261001j">
+  <link rel="stylesheet" href="css/style.css?v=20261001k">
 </head>
 <body>
 
@@ -250,8 +250,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20261001j"></script>
-<script src="js/main.js?v=20261001j"></script>
+<script src="js/products-data.js?v=20261001k"></script>
+<script src="js/main.js?v=20261001k"></script>
 <script>
 /* 경로 표시줄 오른쪽 — 제품 바로 검색 */
 (function initProductSearch() {
@@ -661,7 +661,7 @@
   }
 
   // 수전금구·세면기 제품은 절수확인서를 다루지 않으므로 버튼 자체를 표시하지 않음 (다운로드 버튼 5개로 동일)
-  const NO_WATER_CERT = [...FAUCET_CATS, '세면기', '수채', ...(p.category === '유아용' && p.subcategory === '세면기' ? ['유아용'] : [])];   // 절수와 상관없는 분류는 절수확인서 버튼 숨김
+  const NO_WATER_CERT = [...FAUCET_CATS, '세면기', '수채', '기타', ...(p.category === '유아용' && p.subcategory === '세면기' ? ['유아용'] : [])];   // 절수와 상관없는 분류는 절수확인서 버튼 숨김
   DOC_LIST.filter(({ key }) => !(key === '절수확인서' && NO_WATER_CERT.includes(p.category))).forEach(({ key, icon }) => {
     const url = p.docs && p.docs[key];
     const hasFile = url && url !== '#';
