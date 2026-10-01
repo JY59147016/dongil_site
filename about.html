@@ -261,6 +261,8 @@
       font-size: 0.82rem;
       color: var(--color-text-mute);
     }
+    /* 제목과 설명 사이 실선 (설명이 있는 연혁만; 조직도 상자와 같은 느낌) — 2026-10-01 */
+    .tl-content h4:not(:last-child) { padding-bottom: 9px; margin-bottom: 9px; border-bottom: 1px solid var(--color-border); }
 
     /* ── 3. 대표이사 인사말 섹션 ───────────────────── */
     #greeting {
@@ -489,6 +491,11 @@
       font-weight: 500;
       min-width: 106px;
     }
+    /* 담당 업무를 한 상자로 합치고 사이에 실선 (2026-10-01) */
+    .org-teams.merged { gap: 0; background: #fff; border: 1px solid var(--color-border); border-radius: 8px; overflow: hidden; }
+    .org-teams.merged .org-box.team { border: 0; border-radius: 0; background: transparent; }
+    .org-teams.merged .org-box.team + .org-box.team { position: relative; }
+    .org-teams.merged .org-box.team + .org-box.team::before { content: ''; position: absolute; top: 0; left: 16px; right: 16px; height: 1px; background: var(--color-border); }   /* 실선은 좌우를 띄움 */
 
     /* ── 반응형 ────────────────────────────────────── */
     @media (max-width: 900px) {
@@ -681,7 +688,7 @@
         </div>
 
         <div class="intro-image-box">
-          <img src="images/main_2nd.png" alt="동일도기타일 쇼룸">
+          <img src="images/about_intro.jpg" alt="동일도기타일 욕실 공간">
         </div>
 
       </div>
@@ -897,31 +904,31 @@
             <div class="org-vline"></div>
             <div class="org-box dept">총무부</div>
             <div class="org-vline"></div>
-            <div class="org-teams"><div class="org-box team">법무관리</div><div class="org-box team">경영기획</div></div>
+            <div class="org-teams merged"><div class="org-box team">법무관리</div><div class="org-box team">경영기획</div></div>
           </div>
           <div class="org-dept-col">
             <div class="org-vline"></div>
             <div class="org-box dept">관리부</div>
             <div class="org-vline"></div>
-            <div class="org-teams"><div class="org-box team">전산관리</div><div class="org-box team">세무관리</div></div>
+            <div class="org-teams merged"><div class="org-box team">전산관리</div><div class="org-box team">세무관리</div></div>
           </div>
           <div class="org-dept-col">
             <div class="org-vline"></div>
             <div class="org-box dept">영업부</div>
             <div class="org-vline"></div>
-            <div class="org-teams"><div class="org-box team">건설영업</div><div class="org-box team">설비영업</div></div>
+            <div class="org-teams merged"><div class="org-box team">건설영업</div><div class="org-box team">설비영업</div></div>
           </div>
           <div class="org-dept-col">
             <div class="org-vline"></div>
             <div class="org-box dept">공무부</div>
             <div class="org-vline"></div>
-            <div class="org-teams"><div class="org-box team">현장지원</div><div class="org-box team">이커머스</div></div>
+            <div class="org-teams merged"><div class="org-box team">현장지원</div><div class="org-box team">이커머스</div></div>
           </div>
           <div class="org-dept-col">
             <div class="org-vline"></div>
             <div class="org-box dept">자재부</div>
             <div class="org-vline"></div>
-            <div class="org-teams"><div class="org-box team">자재관리</div><div class="org-box team">물류관리</div></div>
+            <div class="org-teams merged"><div class="org-box team">자재관리</div><div class="org-box team">물류관리</div></div>
           </div>
         </div>
 
