@@ -6,7 +6,7 @@
   <title>위생도기 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261001d">
+  <link rel="stylesheet" href="css/style.css?v=20261001h">
 </head>
 <body>
 
@@ -33,6 +33,8 @@
             <a href="products-sanitary.html?cat=비데">비데</a>
             <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=소변기">소변기</a>
+            <a href="products-sanitary.html?cat=유아용">유아용</a>
+            <a href="products-sanitary.html?cat=수채">수채</a>
             <a href="products-sanitary.html?cat=부속품">부속품</a>
           </div>
         </li>
@@ -79,6 +81,8 @@
       <a href="products-sanitary.html?cat=비데">비데</a>
       <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=소변기">소변기</a>
+      <a href="products-sanitary.html?cat=유아용">유아용</a>
+      <a href="products-sanitary.html?cat=수채">수채</a>
       <a href="products-sanitary.html?cat=부속품">부속품</a>
     </div>
   </div>
@@ -239,6 +243,14 @@
             <label for="s-cat-urinal">소변기</label>
           </div>
           <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-kids" value="유아용">
+            <label for="s-cat-kids">유아용</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-cat-sink" value="수채">
+            <label for="s-cat-sink">수채</label>
+          </div>
+          <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-cat-parts" value="부속품">
             <label for="s-cat-parts">부속품</label>
           </div>
@@ -330,6 +342,48 @@
         </div>
       </div>
 
+      <!-- 소변기 종류 필터 (원본 폴더 이름 = 제품의 subcategory) — 위생도기에서 "소변기"를 골랐을 때만 보임 -->
+      <div class="filter-group" data-filter-group="subcategory" id="urinalSubFilter" style="display:none;">
+        <span class="filter-group-label">소변기</span>
+        <div class="filter-check-list">
+          <div class="filter-check-item is-all">
+            <input type="checkbox" class="group-all-check" id="s-sub-u-all">
+            <label for="s-sub-u-all">전체</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-u1" value="바닥형">
+            <label for="s-sub-u1">바닥형</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-u2" value="벽걸이형">
+            <label for="s-sub-u2">벽걸이형</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 유아용 종류 필터 (원본 폴더 이름 = 제품의 subcategory) — 위생도기에서 "유아용"을 골랐을 때만 보임 -->
+      <div class="filter-group" data-filter-group="subcategory" id="kidsSubFilter" style="display:none;">
+        <span class="filter-group-label">유아용</span>
+        <div class="filter-check-list">
+          <div class="filter-check-item is-all">
+            <input type="checkbox" class="group-all-check" id="s-sub-k-all">
+            <label for="s-sub-k-all">전체</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-k1" value="세면기">
+            <label for="s-sub-k1">세면기</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-k2" value="양변기">
+            <label for="s-sub-k2">양변기</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-k3" value="소변기">
+            <label for="s-sub-k3">소변기</label>
+          </div>
+        </div>
+      </div>
+
       <!-- 부속품 종류 필터 (제품의 subcategory) — 위생도기에서 "부속품"을 골랐을 때만 보임 -->
       <div class="filter-group" data-filter-group="subcategory" id="partsSubFilter" style="display:none;">
         <span class="filter-group-label">부속품</span>
@@ -341,6 +395,14 @@
           <div class="filter-check-item">
             <input type="checkbox" class="item-check" id="s-sub-p1" value="세면기용">
             <label for="s-sub-p1">세면기용</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-p2" value="양변기용">
+            <label for="s-sub-p2">양변기용</label>
+          </div>
+          <div class="filter-check-item">
+            <input type="checkbox" class="item-check" id="s-sub-p3" value="수채용">
+            <label for="s-sub-p3">수채용</label>
           </div>
         </div>
       </div>
@@ -422,12 +484,12 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20261001d"></script>
-<script src="js/main.js?v=20261001d"></script>
+<script src="js/products-data.js?v=20261001h"></script>
+<script src="js/main.js?v=20261001h"></script>
 <script>
 /* ── 위생도기 카드 자동 렌더링 ── */
 (function renderSanitaryCards() {
-  const SANITARY_CATS = ['양변기','세면기','소변기','비데','부속품','기타'];
+  const SANITARY_CATS = ['양변기','세면기','소변기','비데','유아용','수채','부속품','기타'];
   const grid = document.getElementById('product-grid');
   if (!grid || typeof PRODUCTS === 'undefined') return;
 
@@ -464,7 +526,7 @@
 <script>
 /* 세부 분류 줄(세면기 종류·부속품 종류)은 위생도기 필터에서 해당 분류를 골랐을 때만 보이기 — 숨길 때는 고른 종류도 해제 */
 (function () {
-  const PAIRS = [['s-cat-basin', 'basinSubFilter'], ['s-cat-bidet', 'bidetSubFilter'], ['s-cat-toilet', 'toiletSubFilter'], ['s-cat-parts', 'partsSubFilter']];   // [위생도기 체크박스, 세부 분류 줄]
+  const PAIRS = [['s-cat-basin', 'basinSubFilter'], ['s-cat-bidet', 'bidetSubFilter'], ['s-cat-toilet', 'toiletSubFilter'], ['s-cat-urinal', 'urinalSubFilter'], ['s-cat-kids', 'kidsSubFilter'], ['s-cat-parts', 'partsSubFilter']];   // [위생도기 체크박스, 세부 분류 줄]
   function sync() {
     let changed = false;
     PAIRS.forEach(([cbId, rowId]) => {

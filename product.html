@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261001d">
+  <link rel="stylesheet" href="css/style.css?v=20261001h">
 </head>
 <body>
 
@@ -33,6 +33,8 @@
             <a href="products-sanitary.html?cat=비데">비데</a>
             <a href="products-sanitary.html?cat=양변기">양변기</a>
             <a href="products-sanitary.html?cat=소변기">소변기</a>
+            <a href="products-sanitary.html?cat=유아용">유아용</a>
+            <a href="products-sanitary.html?cat=수채">수채</a>
             <a href="products-sanitary.html?cat=부속품">부속품</a>
           </div>
         </li>
@@ -79,6 +81,8 @@
       <a href="products-sanitary.html?cat=비데">비데</a>
       <a href="products-sanitary.html?cat=양변기">양변기</a>
       <a href="products-sanitary.html?cat=소변기">소변기</a>
+      <a href="products-sanitary.html?cat=유아용">유아용</a>
+      <a href="products-sanitary.html?cat=수채">수채</a>
       <a href="products-sanitary.html?cat=부속품">부속품</a>
     </div>
   </div>
@@ -246,8 +250,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20261001d"></script>
-<script src="js/main.js?v=20261001d"></script>
+<script src="js/products-data.js?v=20261001h"></script>
+<script src="js/main.js?v=20261001h"></script>
 <script>
 /* 경로 표시줄 오른쪽 — 제품 바로 검색 */
 (function initProductSearch() {
@@ -500,6 +504,10 @@
   });
   // 양변기: 절수등급 / 배수타입 / 사이즈 (계림 양변기에는 "제품 고시 정보"가 없어서 스펙 표에서)
   SUMMARY['양변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], ['배수타입', clean(specVal('배수타입'))], ['사이즈', clean(specVal('사이즈'))]];
+  // 소변기: 절수등급 / 세척수량 / 사이즈 (계림 소변기에도 "제품 고시 정보"가 없음; 배수타입은 일부 제품에 없어서 세척수량을 씀) — notice 가 있으면 그게 우선
+  SUMMARY['소변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], ['세척수량', clean(specVal('세척수량')) ? clean(specVal('세척수량')) + ' L' : ''], ['사이즈', clean(specVal('사이즈'))]];
+  // 유아용: 종류(subcategory)에 따라 세면기·양변기·소변기와 같은 표
+  SUMMARY['유아용'] = () => (SUMMARY[p.subcategory] ? SUMMARY[p.subcategory]() : [['사이즈', clean(specVal('사이즈'))], ['색상', clean(specVal('색상'))], ['재질', clean(specVal('재질'))]]);
   const NOTICE_CATS = ['소변기'];
   const notice = NOTICE_CATS.includes(p.category) ? (p.notice || []).filter(([k]) => !/^품번\s*\/\s*제품명$/.test(k)) : [];
   if (notice.length) {
@@ -516,7 +524,7 @@
     longs.forEach(([k, v]) => { rowsHtml += '<tr><th>' + escHtml(k) + '</th><td colspan="3">' + cellV(v) + '</td></tr>'; });
     bt.innerHTML = '<caption class="pd-notice-caption">제품 고시 정보</caption><tbody>' + rowsHtml + '</tbody>';
     bt.classList.add('pd-notice-table');
-  } else if (SUMMARY[p.category] || basic.length) {
+  } else if (p.category !== '부속품' && (SUMMARY[p.category] || basic.length)) {   // 부속품은 요약 표 없음 (2026-10-01 사용자 요청) → 아래 "표가 없는 제품" 처리
     const rows = SUMMARY[p.category] ? SUMMARY[p.category]() : BASIC_ROWS.map(k => [k, basicMap[k] || '']);
     bt.innerHTML = '<tbody>' + rows.map(([k, v]) => '<tr><th>' + escHtml(k) + '</th><td>' + (v ? escHtml(v) : '&nbsp;') + '</td></tr>').join('') + '</tbody>';
   } else {
@@ -653,7 +661,7 @@
   }
 
   // 수전금구·세면기 제품은 절수확인서를 다루지 않으므로 버튼 자체를 표시하지 않음 (다운로드 버튼 5개로 동일)
-  const NO_WATER_CERT = [...FAUCET_CATS, '세면기'];
+  const NO_WATER_CERT = [...FAUCET_CATS, '세면기', '수채', ...(p.category === '유아용' && p.subcategory === '세면기' ? ['유아용'] : [])];   // 절수와 상관없는 분류는 절수확인서 버튼 숨김
   DOC_LIST.filter(({ key }) => !(key === '절수확인서' && NO_WATER_CERT.includes(p.category))).forEach(({ key, icon }) => {
     const url = p.docs && p.docs[key];
     const hasFile = url && url !== '#';
