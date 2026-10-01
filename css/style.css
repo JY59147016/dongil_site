@@ -2420,3 +2420,15 @@ ul { list-style: none; }
 .page-banner-faucet p, .page-banner-faucet h1 { color: #4a3a2b !important; text-shadow: none; }
 .page-banner-faucet p { color: #5b4f41 !important; }
 @media (max-width: 768px) { .page-banner-faucet { background-image: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.72) 45%, rgba(255,255,255,.15) 85%), url('../images/banners/faucet_wide.jpg'); } }
+
+/* 위생도기 제목: 수전금구와 같은 방식 (글자 왼쪽 + 흰색 그라데이션, 사진 = 바탕화면\파일\기타\3.png) — 2026-10-01 */
+.page-banner-sanitary { text-align: left; background-image: linear-gradient(90deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.7) 22%, rgba(255,255,255,0) 48%), url('../images/banners/sanitary_wide.jpg'); }
+.page-banner-sanitary p, .page-banner-sanitary h1 { color: #4a3a2b !important; text-shadow: none; }
+.page-banner-sanitary p { color: #5b4f41 !important; }
+@media (max-width: 768px) { .page-banner-sanitary { background-position: center, right center; background-image: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.72) 45%, rgba(255,255,255,.15) 85%), url('../images/banners/sanitary_wide.jpg'); } }
+
+/* 타일 제목: 수전금구와 같은 방식 (글자 왼쪽 + 흰색 그라데이션, 사진 = 바탕화면\파일\기타\4.png) — 2026-10-01 */
+.page-banner-tile { text-align: left; background-image: linear-gradient(90deg, rgba(255,255,255,.88) 0%, rgba(255,255,255,.7) 22%, rgba(255,255,255,0) 48%), url('../images/banners/tile_wide.jpg'); }
+.page-banner-tile p, .page-banner-tile h1 { color: #4a3a2b !important; text-shadow: none; }
+.page-banner-tile p { color: #5b4f41 !important; }
+@media (max-width: 768px) { .page-banner-tile { background-position: center, 72% center; background-image: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.72) 45%, rgba(255,255,255,.15) 85%), url('../images/banners/tile_wide.jpg'); } }
