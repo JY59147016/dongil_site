@@ -724,9 +724,10 @@ ul { list-style: none; }
    #cat-sanitary { background: url('../images/sanitary-bg.jpg') center/cover; }
    #cat-tile     { background: url('../images/tile-bg.jpg') center/cover; } */
 
-#cat-sanitary { background: linear-gradient(135deg, #2c3e50, #4a6274); }
-#cat-faucet   { background: linear-gradient(135deg, #3f4549, #7a8288); }
-#cat-tile     { background: linear-gradient(135deg, #3d3530, #6b5a4e); }
+/* 2026-10-01: 사용자가 준 사진(바탕화면 파일>기타 7·6·8.png → images/cat_*.jpg 800x597) */
+#cat-sanitary { background: #6b5846 url('../images/cat_sanitary.jpg') center/cover no-repeat; }
+#cat-faucet   { background: #6b5846 url('../images/cat_faucet.jpg') center/cover no-repeat; }
+#cat-tile     { background: #6b5846 url('../images/cat_tile.jpg') center/cover no-repeat; }
 
 .category-overlay {
   position: absolute; inset: 0;
@@ -2432,3 +2433,9 @@ ul { list-style: none; }
 .page-banner-tile p, .page-banner-tile h1 { color: #4a3a2b !important; text-shadow: none; }
 .page-banner-tile p { color: #5b4f41 !important; }
 @media (max-width: 768px) { .page-banner-tile { background-position: center, 72% center; background-image: linear-gradient(90deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.72) 45%, rgba(255,255,255,.15) 85%), url('../images/banners/tile_wide.jpg'); } }
+
+/* 메인 제품 카테고리 카드: 밝은 사진 위에서도 글자가 잘 보이게 (2026-10-01) — 아래쪽 짙은 갈색 막을 더 진하고 높게 */
+.category-overlay { background: linear-gradient(to top, rgba(38,27,18,.92) 0%, rgba(38,27,18,.78) 32%, rgba(38,27,18,.35) 58%, rgba(38,27,18,0) 82%); }
+.category-content h3 { text-shadow: 0 1px 8px rgba(0,0,0,.45); }
+.category-content p  { color: rgba(255,255,255,.95); text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+.category-link { color: #f1e3cd; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
