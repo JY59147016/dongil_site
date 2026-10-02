@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261001k">
+  <link rel="stylesheet" href="css/style.css?v=20261002a">
 </head>
 <body>
 
@@ -250,8 +250,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20261001k"></script>
-<script src="js/main.js?v=20261001k"></script>
+<script src="js/products-data.js?v=20261002a"></script>
+<script src="js/main.js?v=20261002a"></script>
 <script>
 /* 경로 표시줄 오른쪽 — 제품 바로 검색 */
 (function initProductSearch() {
@@ -474,7 +474,7 @@
                      ['사이즈', clean(specVal('사이즈'))]],
     '비데':   () => [p.subcategory === '착탈형'
                        // 착탈형은 절수등급 대신 방수등급 (조작부·리모콘 중 값이 있는 것)
-                       ? ['방수등급', [['조작부', specVal('방수등급 (조작부)')], ['리모콘', specVal('방수등급 (리모콘)')]].filter(([, v]) => clean(v)).map(([a, v]) => v + ' (' + a + ')').join(' / ')]
+                       ? ['방수등급', [['조작부', specVal('방수등급 (조작부)')], ['리모콘', specVal('방수등급 (리모콘)')]].filter(([, v]) => clean(v)).map(([a, v]) => v + ' (' + a + ')').join(' / ') || ((clean(specVal('특징')).match(/IPX\d/) || [''])[0])]
                        : ['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')],   // 비데는 "1등급(공통)" → "1등급"
                      ['소비전력', clean(noticeVal('소비전력') || specVal('소비전력'))],
                      ['사이즈', clean(noticeVal('크기') || specVal('사이즈(mm)') || specVal('사이즈'))]],
@@ -498,14 +498,21 @@
   // 샤워헤드: 색상 / 분사모드 / 사이즈, 슬라이드바·악세서리: 색상 / 재질 / 사이즈
   // 분사모드는 "레인 모드" → "레인" 처럼 각 항목 끝의 "모드"를 빼고 표시 (아래 상세 스펙 표는 계림 표기 그대로)
   const noMode = v => clean(v).split(',').map(s => s.trim().replace(/\s*모드(?=\s*(\(|$))/, '')).filter(Boolean).join(', ');
-  SUMMARY['샤워헤드'] = () => [['색상', clean(specVal('색상'))], ['분사모드', noMode(specVal('분사 모드'))], ['사이즈', clean(specVal('사이즈'))]];
-  ['슬라이드바', '악세서리'].forEach(c => {
-    SUMMARY[c] = () => [['색상', clean(specVal('색상'))], ['재질', clean(specVal('재질'))], ['사이즈', clean(specVal('사이즈'))]];
+  // 분사 모드 항목이 없는 자료(대림)는 특징 글의 "3기능" 같은 표시를 씀
+  const sprayFromFeature = () => { const m = clean(specVal('특징')).match(/(\d)\s*기능/); return m ? m[1] + '기능' : ''; };
+  SUMMARY['샤워헤드'] = () => [['색상', clean(specVal('색상'))], ['분사모드', noMode(specVal('분사 모드')) || sprayFromFeature()], ['사이즈', clean(specVal('사이즈'))]];
+  SUMMARY['슬라이드바'] = () => [['색상', clean(specVal('색상'))], ['재질', clean(specVal('재질'))], ['사이즈', clean(specVal('사이즈'))]];
+  // 악세서리·기타(손잡이·등받이 등): 제품번호 / 제품 종류 / 사이즈 (2026-10-01 사용자 요청)
+  ['악세서리', '기타'].forEach(c => {
+    SUMMARY[c] = () => [['제품번호', p.model || ''], ['제품 종류', p.name || ''], ['사이즈', clean(specVal('사이즈'))]];
   });
   // 양변기: 절수등급 / 배수타입 / 사이즈 (계림 양변기에는 "제품 고시 정보"가 없어서 스펙 표에서)
-  SUMMARY['양변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], ['배수타입', clean(specVal('배수타입'))], ['사이즈', clean(specVal('사이즈'))]];
+  const litre = v => { v = clean(v); return v ? (/^[\d.]+$/.test(v) ? v + ' L' : v) : ''; };   // "5.0" → "5.0 L", "5ℓ" 처럼 단위가 있으면 그대로
+  // 배수타입 항목이 없는 자료(대림): 특징 글에 "벽배수"가 있으면 그것, 없으면 세척수량을 보여 줌
+  const drainRow = () => { const d = clean(specVal('배수타입')); if (d) return ['배수타입', d]; if (/벽배수/.test(clean(specVal('특징')))) return ['배수타입', '벽배수']; return ['세척수량', litre(specVal('세척수량'))]; };
+  SUMMARY['양변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], drainRow(), ['사이즈', clean(specVal('사이즈'))]];
   // 소변기: 절수등급 / 세척수량 / 사이즈 (계림 소변기에도 "제품 고시 정보"가 없음; 배수타입은 일부 제품에 없어서 세척수량을 씀) — notice 가 있으면 그게 우선
-  SUMMARY['소변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], ['세척수량', clean(specVal('세척수량')) ? clean(specVal('세척수량')) + ' L' : ''], ['사이즈', clean(specVal('사이즈'))]];
+  SUMMARY['소변기'] = () => [['절수등급', clean(specVal('절수 등급')).replace(/\s*\(공통\)/g, '')], ['세척수량', litre(specVal('세척수량'))], ['사이즈', clean(specVal('사이즈'))]];
   // 유아용: 종류(subcategory)에 따라 세면기·양변기·소변기와 같은 표
   SUMMARY['유아용'] = () => (SUMMARY[p.subcategory] ? SUMMARY[p.subcategory]() : [['사이즈', clean(specVal('사이즈'))], ['색상', clean(specVal('색상'))], ['재질', clean(specVal('재질'))]]);
   const NOTICE_CATS = ['소변기'];
@@ -526,7 +533,7 @@
     bt.classList.add('pd-notice-table');
   } else if (p.category !== '부속품' && (SUMMARY[p.category] || basic.length)) {   // 부속품은 요약 표 없음 (2026-10-01 사용자 요청) → 아래 "표가 없는 제품" 처리
     const rows = SUMMARY[p.category] ? SUMMARY[p.category]() : BASIC_ROWS.map(k => [k, basicMap[k] || '']);
-    bt.innerHTML = '<tbody>' + rows.map(([k, v]) => '<tr><th>' + escHtml(k) + '</th><td>' + (v ? escHtml(v) : '&nbsp;') + '</td></tr>').join('') + '</tbody>';
+    bt.innerHTML = '<tbody>' + rows.map(([k, v]) => '<tr><th>' + escHtml(k) + '</th><td>' + (v ? escHtml(v) : '-') + '</td></tr>').join('') + '</tbody>';   // 값이 없는 칸은 "-"
   } else {
     // 표가 없는 제품: 표(3줄) 크기만큼 빈 공간으로 남겨 다른 제품과 같은 배치·간격이 되도록
     bt.innerHTML = '<tbody>' + '<tr><th>&nbsp;</th><td>&nbsp;</td></tr>'.repeat(3) + '</tbody>';
@@ -593,9 +600,11 @@
         const n = Math.min(pdf.numPages, 5);
         for (let i = 1; i <= n; i++) {
           const page = await pdf.getPage(i);
-          const base = page.getViewport({ scale: 1 });
+          // 옆으로 누운 채 들어 있는 도면은 제품 데이터의 drawingRotate(도) 만큼 더 돌려서 그림 (2026-10-02)
+          const rot = ((page.rotate || 0) + (+p.drawingRotate || 0)) % 360;
+          const base = page.getViewport({ scale: 1, rotation: rot });
           const scale = (pages.clientWidth || 960) / base.width * Math.min(window.devicePixelRatio || 1, 2);
-          const vp = page.getViewport({ scale });
+          const vp = page.getViewport({ scale, rotation: rot });
           const canvas = document.createElement('canvas');
           canvas.className = 'pd-drawing-img';
           canvas.width = vp.width; canvas.height = vp.height;
