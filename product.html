@@ -6,7 +6,7 @@
   <title>제품 상세 — 동일도기타일</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261002a">
+  <link rel="stylesheet" href="css/style.css?v=20261002d">
 </head>
 <body>
 
@@ -250,8 +250,8 @@
   </div>
 </footer>
 
-<script src="js/products-data.js?v=20261002a"></script>
-<script src="js/main.js?v=20261002a"></script>
+<script src="js/products-data.js?v=20261002d"></script>
+<script src="js/main.js?v=20261002d"></script>
 <script>
 /* 경로 표시줄 오른쪽 — 제품 바로 검색 */
 (function initProductSearch() {
@@ -582,13 +582,16 @@
     if (!url || url === '#') return;
     const wrap  = document.getElementById('pd-drawing');
     const pages = document.getElementById('pd-drawing-pages');
-    const ext = url.split('?')[0].split('.').pop().toLowerCase();
+    // 화면에 그릴 파일: 시공도면이 zip 묶음이면 묶음에서 꺼낸 대표 도면(drawingPreview)을 보여 줌. 다운로드 버튼은 원래 파일 그대로.
+    const view = p.drawingPreview || url;
+    const ext = view.split('?')[0].split('.').pop().toLowerCase();
     const fail = () => { pages.innerHTML = '<a class="pd-drawing-link" href="' + url + '" target="_blank" rel="noopener">시공도면 열기</a>'; };
     wrap.style.display = '';
-    if (ext !== 'pdf') {
-      pages.innerHTML = '<img class="pd-drawing-img" src="' + url + '" alt="' + escHtml(p.model) + ' 시공도면" loading="lazy">';
+    if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
+      pages.innerHTML = '<img class="pd-drawing-img" src="' + view + '" alt="' + escHtml(p.model) + ' 시공도면" loading="lazy">';
       return;
     }
+    if (ext !== 'pdf') { fail(); return; }   // dwg·zip 등 그림으로 보여 줄 수 없는 파일은 깨진 그림 대신 "시공도면 열기" 링크
     const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
     async function draw() {
       try {
@@ -596,7 +599,7 @@
           await new Promise((ok, no) => { const s = document.createElement('script'); s.src = PDFJS + 'pdf.min.js'; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
           pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS + 'pdf.worker.min.js';
         }
-        const pdf = await pdfjsLib.getDocument(url).promise;
+        const pdf = await pdfjsLib.getDocument(view).promise;
         const n = Math.min(pdf.numPages, 5);
         for (let i = 1; i <= n; i++) {
           const page = await pdf.getPage(i);
@@ -649,9 +652,10 @@
   /* 파일명에 쓸 수 없는 문자( / \ : * ? " < > | )는 - 로 바꿈 */
   const safeName = s => String(s || '').replace(/[\\/:*?"<>|]+/g, '-').replace(/\s+/g, ' ').trim();
 
-  /* 우리 사이트 파일과 서류 저장소(dongil_docs — CAD·사용설명서) 파일은 받아서
-     "브랜드_모델명_서류종류.확장자" 로 저장. 그 밖의 외부 링크는 그대로 열기 */
-  const RENAMEABLE = [location.origin, 'https://raw.githubusercontent.com/JY59147016/dongil_docs/'];
+  /* 우리 사이트 파일과 서류 저장소(dongil_docs, dongil_docs2, … — CAD·시험성적서·사용설명서) 파일은 받아서
+     "브랜드_모델명_서류종류.확장자" 로 저장. 그 밖의 외부 링크는 그대로 열기
+     (주소 끝에 "/" 를 두지 않음 → dongil_docs2 처럼 번호가 붙은 저장소도 포함. 2026-10-02: 대림바스 서류가 이름이 안 바뀌던 문제) */
+  const RENAMEABLE = [location.origin, 'https://raw.githubusercontent.com/JY59147016/dongil_docs'];
   async function downloadAs(url, filename) {
     try {
       const res = await fetch(url);
